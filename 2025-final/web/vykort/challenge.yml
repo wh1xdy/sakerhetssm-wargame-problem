@@ -1,0 +1,28 @@
+title: Vykort-injektion
+description: Att skicka vykort görs enklare med våra trevliga mallar. Flaggan ligger i /flag.txt :)
+authors:
+  - Movitz Sunar
+categories:
+  - web
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: n3ver_tru57_0p3n_s0urc3
+
+service:
+   type: website
+   image: container
+   internal_port: 8000
+   external_port: 50223
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:50223
+
+challenge_id: edfd3a71-78a0-42bd-a666-87a587c7cb67
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final

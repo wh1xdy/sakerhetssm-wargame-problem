@@ -1,0 +1,25 @@
+title: Only takes patience
+description: >
+    Time is money, friend.
+    The challenge was made in the year 2024 and was built using `clang 18.1.8` for `x86_64-pc-linux-gnu`.
+authors:
+  - Laith Abbawi
+categories:
+  - misc
+
+flag_format_prefix: SSM{
+flags: 1_l0v3_r4nd_ch4ll5
+
+downloadable_files:
+  - main.c
+  - output.txt
+
+score: 200
+challenge_id: fd96fe16-c7dc-44a1-82b8-2e7fb618c9fd
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

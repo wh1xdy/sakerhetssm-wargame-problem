@@ -1,0 +1,35 @@
+title: Pwn Injection
+description: I managed to leak this program but I don't see any flag! What is pwn, anyways?
+authors:
+  - Ellinor
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: 1nJ3Ct10n_15_m0r3_c0Mm0n1y_a_W3b_73rM
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 50210
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 50210
+
+downloadable_files:
+  - container/challenge.py
+
+score: 100
+challenge_id: 3a564933-6590-4e52-ae3b-accc289b5f12
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

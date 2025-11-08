@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom QR Code Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      .banner {
+        background: linear-gradient(
+          to right,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet
+        );
+        color: white;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      form {
+        margin: 20px;
+      }
+      input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .qr-image {
+        margin-top: 20px;
+      }
+      img {
+        width: 500px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">Why stop at black and white QR codes?</div>
+
+    <form id="qrForm">
+      <input
+        type="text"
+        id="data"
+        name="data"
+        placeholder="Enter text for QR code"
+        required
+      />
+      <br />
+      <button type="submit">Generate QR Code</button>
+    </form>
+
+    <div class="qr-image" id="qrImageContainer">
+      <img id="qrImage" src="" alt="Your QR Code will appear here" />
+    </div>
+
+    <script>
+      const form = document.getElementById("qrForm");
+      const qrImage = document.getElementById("qrImage");
+      const qrImageContainer = document.getElementById("qrImageContainer");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const data = formData.get("data");
+
+        try {
+          const response = await fetch("/generate_qr", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ data }),
+          });
+
+          if (response.ok) {
+            const data = await response.text();
+            qrImage.src = data + "/500";
+            qrImage.alt = "Generated QR Code";
+            qrImageContainer.style.display = "block";
+          } else {
+            alert("Error generating QR code");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert("An error occurred while connecting to the server.");
+        }
+      });
+    </script>
+  </body>
+</html>

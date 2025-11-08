@@ -1,0 +1,23 @@
+strace ca_generator -certpath /work/cert.pem -keypath /work/key.pem 2>/var/log/debuglog
+
+
+./ca_generator -certpath cert.pem -keypath key.pem
+
+strace ./ca_generator -certpath cert.pem -keypath key.pem |& grep getrandom
+
+gcc -o hook.so -Wall -Wpedantic -shared -fPIC hook.c
+
+LD_PRELOAD=$(pwd)/hook.so ./ca_generator -certpath cert.pem -keypath key.pem
+
+LD_PRELOAD=$(pwd)/hook.so strace ./ca_generator -certpath cert.pem -keypath key.pem |& grep getrandom
+
+
+stat tmp/var/log/debuglog 
+  File: tmp/var/log/debuglog
+  Size: 26577     	Blocks: 56         IO Block: 4096   regular file
+Device: 8,3	Inode: 3343284     Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/ zetatwo)   Gid: ( 1000/ zetatwo)
+Access: 2025-03-07 00:57:38.664977211 +0100
+Modify: 2025-03-02 16:57:01.000000000 +0100
+Change: 2025-03-07 00:57:38.664977211 +0100
+ Birth: 2025-03-07 00:57:38.664977211 +0100

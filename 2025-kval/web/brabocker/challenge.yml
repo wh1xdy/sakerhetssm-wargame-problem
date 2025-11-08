@@ -1,0 +1,33 @@
+title: BraBöcker
+description: Good reads är inget i jämförelse med BraBöcker!
+authors:
+  - mkg
+categories:
+  - web
+
+flag_format_prefix: SSM{
+flags: Som_Whitney_Smith_skulle_jag_Designa_Fl4ggor_och_Exploatera_D1r3kta_R3f3r3nc3r!
+
+downloadable_files:
+  - handout.zip
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:50203
+
+service:
+  type: website
+  image: container
+  internal_port: 5555
+  external_port: 50203
+
+score: 200
+challenge_id: 338f29d9-dc65-40ff-baae-46f1f514c0d7
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval
+

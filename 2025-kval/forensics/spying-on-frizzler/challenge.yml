@@ -1,0 +1,23 @@
+title: Spying on Frizzler
+description: Vi har övervakat Frizzlers internettrafik och vi tror att han har hämtat en flagga på senaste tiden. Kan du hitta den?
+authors:
+  - Movitz Sunar
+categories:
+  - forensics
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: w4it_1s_th15_fras5es_bak3ry
+
+downloadable_files:
+  - frizzler.pcap
+
+score: 100
+challenge_id: 3cfad32c-3f6a-4395-a87e-fa65d0f7801e
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

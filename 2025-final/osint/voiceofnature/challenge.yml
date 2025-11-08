@@ -1,0 +1,28 @@
+title: VoiceOfNature
+description: I just found a website <a href="https://voiceofnature.github.io">https://voiceofnature.github.io</a> and I would like to know who that person is. Perhaps I can use the new search engine MrStalker?
+authors:
+  - AndreasLonn
+categories:
+  - osint
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: Mr$t4lk3r_1s_w4tch1ng_y0u
+
+service:
+   type: website
+   image: container
+   internal_port: 1337
+   external_port: 50226
+   
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:50226
+
+challenge_id: e411c846-1ad6-4fff-995a-3ce075bbddf0
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final

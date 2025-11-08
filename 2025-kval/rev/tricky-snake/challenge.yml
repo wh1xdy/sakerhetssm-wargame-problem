@@ -1,0 +1,22 @@
+title: Tricky Snake
+description: The snake asks you for the secret password. Beware though, she is very tricky.
+authors:
+  - ZetaTwo
+categories:
+  - reversing
+
+flag_format_prefix: SSM{
+flags: oh_no_my_sssecret_ssstasssh
+
+downloadable_files:
+  - tricky.py
+
+score: 200
+challenge_id: c463c86f-5652-4b0c-99f7-3d1fc527a2a8
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

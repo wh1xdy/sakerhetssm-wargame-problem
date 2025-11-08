@@ -1,0 +1,35 @@
+title: Hexmex
+description: My program became Hexmex and now I can't find my flag. I heard that you're the person to ask about these kinds of things, will you help me find it? The flag resides in the flag.txt file.
+authors:
+  - Ellinor
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: n0w_Y0u'v3_607_4_74573_4_H3XM3X
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 50206
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 50206
+
+downloadable_files:
+  - container/challenge.py
+
+score: 200
+challenge_id: 71a6ab52-b3f9-4245-963a-eaf5dedaa5d8
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

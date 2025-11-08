@@ -1,0 +1,33 @@
+title: KebabBanken
+description: En kebab har lyckats öppna en bank!!! Hoppas den inte går att råna bara...
+authors:
+  - LiamoOo
+categories:
+  - blockchain
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: låt_inte_kebaben_kontrollera_världsekonomin
+
+deployment:
+  type: docker
+  containers:
+    web:
+      image: ./container
+      services:
+        - type: tcp
+          internal_port: 1337
+      extra_exposed_ports:
+        - internal_port: 31337
+          external_port: 31337
+
+downloadable_files:
+  - container/contracts/KebabBanken.sol
+  - container/contracts/Setup.sol
+
+score: 400
+challenge_id: 1fc26ebe-90f2-466c-b86a-38c0ca6eb5af
+spec: 0.0.1
+
+custom:
+  order: 62

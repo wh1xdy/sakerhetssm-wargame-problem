@@ -1,0 +1,22 @@
+title: Crackme 1
+description: I forgot my password but I remember that I used this tool to check if it is correct. Can you help me recover it?
+authors:
+  - ZetaTwo
+categories:
+  - reversing
+
+flag_format_prefix: SSM{
+flags: k33ping_1t_iN_mY_m3morY
+
+downloadable_files:
+  - crackme1
+
+score: 200
+challenge_id: 7f25b2b5-4595-470a-b3b4-08e0b4da55d4
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

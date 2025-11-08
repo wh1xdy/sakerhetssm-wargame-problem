@@ -1,0 +1,64 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Home - Advanced Customs Declaration System{% endblock %}
+
+{% block content %}
+<div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-customs-primary mb-4">Welcome to the Advanced Customs Declaration System</h1>
+    <p class="text-lg max-w-2xl mx-auto text-gray-600">Declare your goods legally and help us combat smuggling. Our
+        digital system makes it easy to comply with customs regulations.</p>
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-customs-accent">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-customs-accent mb-4" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        <h2 class="text-xl font-semibold mb-2">Simple Declarations</h2>
+        <p class="text-gray-600">Easily declare your goods through our streamlined online system. No paperwork, no
+            queues.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-customs-accent">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-customs-accent mb-4" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+        <h2 class="text-xl font-semibold mb-2">Secure & Compliant</h2>
+        <p class="text-gray-600">Your data is protected with industry-standard encryption. Stay compliant with all
+            customs regulations.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-customs-accent">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-customs-accent mb-4" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+        </svg>
+        <h2 class="text-xl font-semibold mb-2">Always Available</h2>
+        <p class="text-gray-600">Access your declaration history anytime. Make declarations 24/7 from anywhere in the
+            world.</p>
+    </div>
+</div>
+
+<div class="mt-12 bg-customs-primary text-white p-6 rounded-lg shadow-md">
+    <div class="flex items-start space-x-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <div>
+            <h2 class="text-2xl font-bold mb-2">Warning!</h2>
+            <p class="text-lg"> Make sure you are aware of the customs regulations before declaring your goods. This will
+                help you avoid penalties and possible confiscation of your goods.
+            </p>
+            <a href="/login"
+                class="inline-block mt-4 bg-customs-secondary text-customs-primary font-bold py-2 px-4 rounded hover:bg-opacity-90 transition">Start Declaring</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

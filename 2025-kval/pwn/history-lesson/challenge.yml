@@ -1,0 +1,41 @@
+title: History Lesson
+description: We just recevied a new contribution to the Linux kernel from this new maintainer which adds some extra error checking. Can you please review their patch to check that it is working correctly?
+authors:
+  - ZetaTwo
+categories:
+  - pwn
+
+flag_format_prefix: SSM{
+flags: 1t_w4s_3ven_M0re_SubTle_b4ck_th3n
+
+downloadable_files:
+  - historylesson.zip
+
+service:
+  type: tcp
+  image: .
+  internal_port: 31337
+  external_port: 50207
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 50207
+
+score: 500
+challenge_id: 556405a7-2da0-4d8d-b5fc-fd5b871d6666
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval
+
+# License note: This challenge borrows heavily from https://github.com/ZetaTwo/potluckctf/tree/main/challenges/challenge-09 and is therefore covered by Apache 2.0 license
+
+# If you run the challenge on Ubuntu 24, you need the following:
+# reference: https://github.com/google/nsjail/issues/236
+# sudo sysctl -w kernel.apparmor_restrict_unprivileged_unconfined=0
+# sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0

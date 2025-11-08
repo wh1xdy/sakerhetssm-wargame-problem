@@ -1,0 +1,31 @@
+title: webshell, not well
+description: "Staketmyndigheten har fått en fil som heter c99.php på sin server, är detta en risk för oss? \n Några verkar redan forskat på detta: https://labs.watchtowr.com/more-governments-backdoors-in-your-backdoors/"
+authors:
+  - Movitz Sunar
+categories:
+  - web
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: läskig4st3_vär1den_någ0nsin!
+
+service:
+   type: website
+   image: container
+   internal_port: 80
+   external_port: 50224
+   
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:50224
+
+downloadable_files:
+  - container/c99.php
+
+challenge_id: 2a4edfcd-3df6-44ed-9510-8106634eda3a
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final

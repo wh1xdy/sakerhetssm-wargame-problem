@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Admin - Customs Declaration System{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'customs-primary': '#1e40af',
+                        'customs-secondary': '#475569',
+                        'customs-accent': '#3b82f6',
+                        'customs-light': '#f0f9ff',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-800">Friend in desperate need!</h1>
+        <div>
+            Your friend needs to get some <em>totally legal</em> items through customs.  
+    He asked for your help, and you couldn't say no. Now, it's up to you  
+    to craft the perfect customs declaration and convince the officer  
+    that everything checks out. Get it approved, and you'll be rewarded  
+    with something <em>special</em> 😉
+        </div>
+        {% if message %}
+        <div class="mt-4 bg-customs-light p-4 rounded-md">
+            <p class="text-sm font-medium text-gray-700">{{ message }}</p>
+        </div>
+        {% endif %}
+
+        <form action="/" method="post">
+            <div class="mt-4">
+                <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+                <input type="text" id="description" name="description" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customs-primary focus:border-customs-primary sm:text-sm">
+            </div>
+            <div class="mt-4">
+                <label for="item_name" class="block text-sm font-medium text-gray-700">Item Name</label>
+                <input type="text" id="item_name" name="item_name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customs-primary focus:border-customs-primary sm:text-sm">
+            </div>
+            <div class="mt-4">
+                <label for="value" class="block text-sm font-medium text-gray-700">Value</label>
+                <input type="number" id="value" name="value" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customs-primary focus:border-customs-primary sm:text-sm">
+            </div>
+            <div class="mt-4">
+                <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
+                <select type="text" id="category" name="category" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-customs-primary focus:border-customs-primary sm:text-sm">
+                    <option value="">Select a category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="food">Food & Beverages</option>
+                    <option value="jewelry">Jewelry</option>
+                    <option value="collectibles">Collectibles</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="mt-4">
+                <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-customs-primary hover:bg-customs-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-customs-primary">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>

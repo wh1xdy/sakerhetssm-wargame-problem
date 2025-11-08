@@ -1,0 +1,34 @@
+title: Alfred's Marketplace
+description: Alfred's good friend, Kevin, was recently scammed on Tradera while trying to buy an iPhone. To ensure his friend is never scammed again, Alfred decided to create his own super-secure marketplace.
+authors:
+  - opcode86
+categories:
+  - pwn
+flag_format_prefix: SSM{
+flags: kevin_finna_start_his_villain_arc_after_dis
+
+downloadable_files:
+  - ./container/chall
+  - ./libc.so.6
+  - ./chall.cpp
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 50231
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 50231
+
+challenge_id: c0de1c0c-7549-4717-8be2-cb5adc1faed8
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final

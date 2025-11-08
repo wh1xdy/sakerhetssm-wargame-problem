@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrStalker - Remove yourself</title>
+    <style>
+        @keyframes colorbackground {
+            from { background-color: green; color: red; transform: translate(0em, 0em) rotate3d(1,1,1,0deg); }
+            25% { background-color: red; color: blue; transform: translate(0.2em, -0.3em) rotate3d(1,1,1,1deg); }
+            50% { background-color: blue; color: green; transform: translate(0.2em, 0.3em) rotate3d(1,1,1,2deg); }
+            75% { background-color: red; color: blue; transform: translate(-0.1em, 0.2em) rotate3d(1,1,1,1deg); }
+            to { background-color: green; color: red; transform: translate(0em, 0em) rotate3d(1,1,1,0deg); }
+        }
+        :has(form:is(:focus,:hover)) * {
+            color: aliceblue;
+            background-color: azure;
+            animation: colorbackground 4s infinite;
+            transition: transform 0.5s;
+        }
+        :has(form:is(:focus,:hover)) *:nth-child(3n) {
+            animation-delay: -2s;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        :has(form:is(:focus,:hover)) *:nth-child(3n+1) {
+            animation-delay: -1s;
+            animation-timing-function: cubic-bezier(1,-4.61,.14,1.49);;
+        }
+        h1 a {
+            color: initial;
+            text-decoration: none;
+        }
+        form, form label {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+        form {
+            gap: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="/">MrStalker</a></h1>
+    <form method="post">
+        <h2>Remove yourself from MrStalker's database</h2>
+        <label>
+            Full legal name
+            <input type="text" required name="full-legal-name">
+        </label>
+        <label>
+            Date of birth
+            <input type="datetime" required name="date-of-birth">
+        </label>
+        <label>
+            Personal number
+            <input type="text" pattern="\d{6}[+\-]\d{4}" required name="personalnumber">
+        </label>
+        <label>
+            I am a citizen of Sweden
+            <input type="checkbox" required name="swedish-citizen">
+        </label>
+        <label>
+            Milliseconds until MrStalker is allowed to re-add me to the database
+            <input type="number" step="1" value="0" required name="tome-untill-readd">
+        </label>
+        <label>
+            I am sure that I want to do this
+            <input type="checkbox" required name="i-am-sure">
+        </label>
+        <label>
+            I have read and understood everything thoroughly
+            <input type="checkbox" required name="read-thoroughly">
+        </label>
+        <label>
+            Captcha: Find an integer solution on the form "a=N, b=N, c=N" to the equation "a^3 + b^3 + c^3 = 4"
+            <input type="text" pattern="a=\d+, b=\d+, c=\d+" required name="captcha">
+        </label>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>

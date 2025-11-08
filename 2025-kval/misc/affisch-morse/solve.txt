@@ -1,0 +1,4 @@
+https://gchq.github.io/CyberChef/#recipe=From_Morse_Code('Space','Line%20feed')&input=Li0uIC0tLSAtIC4tLS0tIC4uLi0tIC0tLS4uLiAKLi4tLiAuLi0uIC0tLi4gLS4tLS4gLS4uLSAuLiAtLiAtLi0tIC4tLiAtLS4gLi4tLS4tIC4tIC4tLiAtLi0gLS0uIC0uLS4tLSAtLi0tLi0
+
+https://gchq.github.io/CyberChef/#recipe=ROT13(true,true,false,13)&input=RkZaKFhJTllSR19BUktHISk
+

@@ -1,0 +1,31 @@
+title: QRGB
+description: "Svensk tv fattade det redan 1967."
+authors:
+  - Theo
+categories:
+  - reversing
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: 53cur17y_7hr0u6h_hu35cur17y
+
+service:
+   type: website
+   image: container
+   internal_port: 1337
+   external_port: 50225
+   
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:50225
+
+downloadable_files:
+  - container/flag.png
+
+challenge_id: d1ae99c8-c025-4416-ad34-7cd1c0b162db
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final

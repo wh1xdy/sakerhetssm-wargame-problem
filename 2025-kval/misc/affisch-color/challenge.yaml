@@ -1,0 +1,24 @@
+title: Affisch färg
+description: >
+    Årets affisch har två problem! De konstiga färgerna har något att säga...
+authors:
+  - ZetaTwo
+  - DayDun
+categories:
+  - misc
+
+flag_format_prefix: SSM{
+flags: färg-affischionado
+
+downloadable_files:
+  - image.png
+
+score: 150
+challenge_id: af873865-812f-4bc4-b9c8-9e548e8c826d
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

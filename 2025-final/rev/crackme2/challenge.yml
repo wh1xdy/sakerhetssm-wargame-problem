@@ -1,0 +1,20 @@
+title: Crackme 2
+description: I forgot my password again but I remember that I used this other tool to check if it is correct. Can you help me recover it?
+authors:
+  - ZetaTwo
+categories:
+  - reversing
+flag_format_prefix: SSM{
+flags: b1t_bY_biT_littl3_by_Little
+
+downloadable_files:
+  - crackme2
+
+challenge_id: 61ca4c1a-f9a9-49e3-b4fb-d60a91ff67c5
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final
