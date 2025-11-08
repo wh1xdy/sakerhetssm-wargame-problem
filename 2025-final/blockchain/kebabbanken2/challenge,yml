@@ -1,0 +1,40 @@
+title: KebabBanken 2
+description: "Det verkar som att kebaben är tillbaks i stan och förhoppningsvis har den lärt sig från sina tidigare misstag... 🥶🎉🥳🥳💔🥀💔🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀😈👻👻🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀💇🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🥀🚨🥀🥀🥀🥀🥀🥀"
+authors:
+  - LiamoOo
+categories:
+  - blockchain
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: "k3b4b>gyr05>f4l4f3l"
+
+deployment:
+  type: docker
+  containers:
+    web:
+      image: ./container
+      services:
+        - type: tcp
+          internal_port: 1337
+      extra_exposed_ports:
+        - internal_port: 31337
+          external_port: 50230
+
+predefined_services:
+- type: 
+
+downloadable_files:
+  - container/contracts/KebabBanken2.sol
+  - container/contracts/Setup.sol
+
+
+challenge_id: b855f947-195a-4eba-8287-b40079c747a3
+spec: 0.0.1
+
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2025 Final
+

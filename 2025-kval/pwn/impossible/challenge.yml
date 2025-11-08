@@ -1,0 +1,36 @@
+title: Impossible
+description: I tried to enter the right answer but it wasn't accepted. I think it might be impossible to solve this.
+authors:
+  - toblu
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: w0w_1t_w4s_4ctu4lly_p0ss1bl3!
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 50208
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 50208
+
+downloadable_files:
+  - main.c
+  - container/service
+
+score: 400
+challenge_id: f50d22fe-c1a0-49b8-993e-06df06449c63
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

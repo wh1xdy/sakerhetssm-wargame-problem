@@ -1,0 +1,21 @@
+title: Välinslagen
+description: Jag har alltid varit så dålig på att slå in paket, men med så här många lager torde det väl hålla?
+authors:
+  - Valter Wik
+categories:
+  - reversing
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: god_jul!(+-30dagar)
+
+downloadable_files:
+  - paket
+
+challenge_id: 59f40300-9866-46b7-a679-88f3558e0c09
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final

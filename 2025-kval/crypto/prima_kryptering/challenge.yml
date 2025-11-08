@@ -1,0 +1,24 @@
+title: Prima kryptering
+description: För att dekryptera RSA behöver du kunna faktorisera, nu är det omöjligt så mina hemligheter är säkra!
+
+authors:
+  - Valter Wik
+categories:
+  - crypto
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: primt_n_e_inte_prima
+
+downloadable_files:
+  - chall.py
+
+score: 400
+challenge_id: e68b2545-b3c6-45d0-ba7c-387ea04f7f4e
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

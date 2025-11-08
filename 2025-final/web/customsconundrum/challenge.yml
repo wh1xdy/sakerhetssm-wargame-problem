@@ -1,0 +1,39 @@
+title: "🥀Customs Conundrum: The Package Predicamentvis - Friendship, Favors, and Falsified Import Documents🥀"
+description: "Your friend is in <em>desperate need</em> — he's got a <em>totally-not-illegal</em> package that <strong>must</strong> get through customs 🤯😈!!! He's counting on you to finesse the paperwork and make it look <em>legit</em>😇🥶!!! If you succeed, there's a <strong>special reward</strong> waiting for you 🥳🎉"
+authors:
+  - LiamoOo
+categories:
+  - web
+flag_format_prefix: SSM{
+flags: y0ur_fr13nd_5muggl3d_a_b0mb_4nd_ev3ry0ne_expl0d3d_:(
+
+downloadable_files:
+  - handout.zip
+
+deployment:
+  type: docker
+  containers:
+    app:
+      image: ./container
+      services:
+        - type: website
+          internal_port: 8080
+          external_port: 50220
+        - type: website
+          internal_port: 8083
+          external_port: 50221
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:50220
+- type: website
+  url: http://ssmarkiv.ctfchall.se:50221
+
+challenge_id: ebf41a15-412c-419f-95b9-9640a34e8cf6
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final

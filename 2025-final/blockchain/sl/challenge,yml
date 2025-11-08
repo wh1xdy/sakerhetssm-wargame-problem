@@ -1,0 +1,35 @@
+title: SL
+description: StockholmsLokaltrafik utvecklar nya sätt för resenärer att både köpa biljetter och resa kollektivt. Genom att använda Ethereum-blockkedjan kan StockholmsLokaltrafik skapa en decentraliserad lösning där resenärer enkelt kan köpa och hantera sina biljetter utan att gå via traditionella mellanled. Smart contractet kan hantera betalningar i realtid, verifiera resenärers giltighet och till och med möjliggöra återbetalningar vid exempelvis förseningar - allt på ett transparent och automatiserat sätt. Detta kan dessutom öppna upp för användning av kryptovalutor eller tokens som betalmedel, vilket gör systemet både modernt och flexibelt.
+authors:
+  - LiamoOo
+categories:
+  - blockchain
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: "🚌💨💥👥🤕🦽"
+
+deployment:
+  type: docker
+  containers:
+    web:
+      image: ./container
+      services:
+        - type: tcp
+          internal_port: 1337
+      extra_exposed_ports:
+        - internal_port: 31337
+          external_port: 31337
+
+downloadable_files:
+  - container/contracts/SL.sol
+  - container/contracts/Setup.sol
+
+
+challenge_id: 81692e49-4f65-4844-a837-f71975f81748
+spec: 0.0.1
+
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2025 Final

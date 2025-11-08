@@ -1,0 +1,9 @@
+services:
+  ubuntu:
+    image: ubuntu:24.10
+    volumes:
+      - ./data:/data
+    command: "/data/generate.sh"
+    user: root
+
+# docker compose up

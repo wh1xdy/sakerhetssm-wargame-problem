@@ -1,0 +1,125 @@
+/* style.css */
+
+/* Set a modern, sans-serif font and a dark background */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #f0f0f0;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #1a1a1a; */
+  background-image: url("background.jpg");
+  background-color: rgba(26, 26, 26, 0.8);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+#img-container {
+  display:grid;
+  grid-template-columns: 400px 400px;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+
+#img-container > img {
+  border-radius: 10px;
+}
+
+/* Style the header */
+header {
+  background-color: #2c2c2c;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  min-height: 50px;
+}
+
+/* Style the navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff69b4;
+}
+
+/* Style the main content area */
+main {
+  margin: 0 auto;
+  padding: 20px 10vw;
+  flex: 1;
+}
+
+/* Style headings */
+h1, h2, h3 {
+  color: #ff69b4;
+  text-align: center;
+}
+
+/* Style paragraphs */
+p {
+  margin-bottom: 20px;
+}
+
+/* Style links */
+a {
+  color: #ff69b4;
+  text-decoration: none;
+  border-bottom: 1px solid #ff69b4;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #ff1493;
+  border-bottom-color: #ff1493;
+}
+
+/* Style buttons */
+button {
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+/* Style form elements */
+input, textarea {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Style the footer */
+footer {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+}

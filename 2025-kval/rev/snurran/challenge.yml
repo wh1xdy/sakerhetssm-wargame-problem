@@ -1,0 +1,23 @@
+title: Snurran
+description: Ey, nån försökte leaka vår 💼 <i>statshemlis</i>! Vi stoppade dem i sista sekunden 🚔, men vi hittade en 🔥 <b>sus binär</b>. Nu snurrar den oss som en karusell 🎢. Kan du analysera den här madnessen? 🧠✨
+authors:
+  - Försvarets Radioanstalt
+categories:
+  - reversing
+
+flag_format_prefix: SSM{
+flags: r0und_4nd_r0und
+
+downloadable_files:
+  - snurran.cpp
+  - core
+
+score: 400
+challenge_id: 949e469b-8ea7-4d28-8ae8-11c54e256fc9
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

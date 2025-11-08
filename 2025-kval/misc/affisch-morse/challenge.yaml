@@ -1,0 +1,25 @@
+title: Affisch beep
+description: >
+    Årets affisch har två problem! beep boop
+authors:
+  - Movitz Sunar
+categories:
+  - misc
+
+flag_format_prefix: 
+flags: 
+  - flag: SSM(KVALET_NEXT!)
+  - flag: SSM{KVALET_NEXT!}
+
+downloadable_files:
+  - image.png
+
+score: 50
+challenge_id: b0994402-8519-4fb6-85d4-4bcc02cee541
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

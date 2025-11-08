@@ -1,0 +1,33 @@
+title: Premium Cryptor
+description: A hot new encryption program has just been released. Do you want to try it out?
+authors:
+  - ZetaTwo
+categories:
+  - pwn
+flag_format_prefix: SSM{
+flags: what_1s_a_funct1on_dom4in
+
+downloadable_files:
+  - container/chall
+  - challenge.c
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 50234
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 50234
+
+challenge_id: 01a593d6-3a58-40ab-8081-917398744b65
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final

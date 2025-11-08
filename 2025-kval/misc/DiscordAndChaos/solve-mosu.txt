@@ -1,0 +1,20 @@
+Gå med i servern
+
+Se i devtools att request går till
+
+https://discord.com/api/v9/channels/1317377090621935677/messages?limit=50
+
+I firefox kan man "edit and replay", ändra URL till 
+
+https://discord.com/api/v9/guilds/1317375123057016844/channels
+
+notera nytt id som tillhör servern, ID:t kan ses i addressfältet i webbläsaren enligt nedan
+
+https://discord.com/channels/1317375123057016844/1317377090621935677
+
+
+flaggan finns i objektet som returneras!
+
+
+[{"id":"1317377090621935677","type":0,"last_message_id":"1317380628404113461","flags":0,"guild_id":"1317375123057016844","name":"user","parent_id":null,"rate_limit_per_user":0,"topic":"The Discord And Chaos chall from SSM","position":0,"permission_overwrites":[],"nsfw":false},{"id":"1317377177741819934","type":0,"last_message_id":"1317379865594298449","flags":0,"guild_id":"1317375123057016844","name":"root","parent_id":null,"rate_limit_per_user":0,"topic":"SSM{4_r341_h4xxor???}","position":1,"permission_overwrites":[{"id":"1317375123057016844","type":0,"allow":"0","deny":"1024"}],"nsfw":false}]
+

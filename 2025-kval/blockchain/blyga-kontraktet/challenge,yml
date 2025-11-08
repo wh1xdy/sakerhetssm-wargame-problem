@@ -1,0 +1,34 @@
+title: blyga kontraktet
+description: hoppsan mitt kontrakt vägrar visa sig, det enda jag lyckades få tag i var dess abi...
+authors:
+  - LiamoOo
+categories:
+  - blockchain
+  - reversing
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: "man_kan_inte_gömma_sig_från_blockkedjan_mohahahahah"
+
+deployment:
+  type: docker
+  containers:
+    web:
+      image: ./container
+      services:
+        - type: tcp
+          internal_port: 1337
+      extra_exposed_ports:
+        - internal_port: 31337
+          external_port: 31337
+
+downloadable_files:
+  - container/contracts/Setup.sol
+  - container/Secret.json
+
+score: 500
+challenge_id: d2066614-a275-4f9b-8a06-338fc2ca6bf9
+spec: 0.0.1
+
+custom:
+  order: 63

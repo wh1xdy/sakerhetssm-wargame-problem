@@ -1,0 +1,23 @@
+title: POs Stickers
+description: Programmeringsolympiaden accidentally dropped all their stickers, and now they're stacked on top of each other in a messy pile. Can you help PO peel the stickers apart?
+authors:
+  - Harry Zhang
+categories:
+  - misc
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: UP50!V3_PO_4_5T!CK3RS_5SG5SG
+
+downloadable_files:
+  - po-stickers.svg
+
+score: 100
+challenge_id: 1da7ac2d-7f1a-4bec-a23e-2e168264f9c3
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

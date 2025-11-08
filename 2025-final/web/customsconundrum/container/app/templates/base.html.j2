@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'unsafe-inline' 'self';">
+    <title>{% block title %}Advanced Customs Declaration System{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customs: {
+                            primary: '#00356B',
+                            secondary: '#FFD100',
+                            accent: '#007F5F',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    {% block head %}{% endblock %}
+</head>
+
+<body class="bg-slate-50 min-h-screen">
+    <nav class="bg-customs-primary text-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="font-bold text-xl">Advanced Customs Declaration System</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                {% if user_logged_in %}
+                <a href="/declarations" class="hover:text-customs-secondary">My Declarations</a>
+                <a href="/declare" class="hover:text-customs-secondary">New Declaration</a>
+                <a href="/logout" class="hover:text-customs-secondary">Logout</a>
+                {% else %}
+                <a href="/login" class="hover:text-customs-secondary">Login</a>
+                <a href="/register" class="hover:text-customs-secondary">Register</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 min-h-[90vh]">
+        {% if flash_message %}
+        <div
+            class="mb-6 p-4 rounded {% if flash_type == 'error' %}bg-red-100 text-red-700{% else %}bg-green-100 text-green-700{% endif %}">
+            {{ flash_message }}
+        </div>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-customs-primary text-white mt-12 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Advanced Customs Declaration System</p>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

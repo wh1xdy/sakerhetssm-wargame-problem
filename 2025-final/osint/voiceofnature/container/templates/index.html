@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrStalker</title>
+    <style>
+        :root {
+            font-family: Consolas, 'Courier New', Courier, monospace;
+        }
+        :root, html, body {
+            margin: 0;
+        }
+        main {
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        form {
+            height: 90vh;
+            padding: 100px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        form > h1 {
+            font-size: 3em;
+            text-align: center;
+        }
+        form > input {
+            font-size: 2em;
+            text-align: center;
+        }
+        main > nav {
+            --margin: 2em;
+            position: absolute;
+            bottom: var(--margin);
+            width: 100vw;
+            text-align: center;
+        }
+        #remove, #privacy {
+            --x: 0;
+            --y: 0;
+            transform: translate(var(--x), var(--y));
+            position: absolute;
+            transition: all 0.1s;
+        }
+        #remove:hover, #privacy:hover {
+            visibility: hidden;
+        }
+        #remove {
+            left: var(--margin);
+        }
+        #privacy {
+            right: var(--margin);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form action="search">
+            <h1>MrStalker</h1>
+            <input type="text" placeholder="Name, age, address, interests..." required name="query">
+        </form>
+        <nav>
+            <a href="remove" id="remove">Remove yourself</a>
+            <a href="aboutus" id="about">About Us</a>
+            <a href="privacy" id="privacy">Privacy Policy</a>
+        </nav>
+    </main>
+    <script>
+        const removeButton = document.querySelector('#remove');
+        const privacyButton = document.querySelector('#privacy');
+        document.addEventListener('mousemove', event => {
+            [privacyButton, removeButton].forEach(button => {
+                const buttonBox = button.getBoundingClientRect();
+                const centerX = buttonBox.x + buttonBox.width / 2;
+                const centerY = buttonBox.y + buttonBox.height / 2;
+                const diffX = event.clientX - centerX;
+                const diffY = event.clientY - centerY;
+                const cssOffsetX = button.style.getPropertyValue('--x');
+                const cssOffsetY = button.style.getPropertyValue('--y');
+                const currentOffsetX = Number(cssOffsetX.substring(0, cssOffsetX.indexOf('px')));
+                const currentOffsetY = Number(cssOffsetY.substring(0, cssOffsetY.indexOf('px')));
+                const distance = 100;
+                if (Math.abs(diffX) < distance && Math.abs(diffY) < distance) {
+                    const offsetX = diffX < 0 ? (distance - 1 + diffX) : (-distance + 1 + diffX);
+                    const offsetY = diffY < 0 ? (distance - 1 + diffY) : (-distance + 1 + diffY)
+                    if(offsetX > offsetY)
+                        button.style.setProperty('--x', `${currentOffsetX + offsetX}px`);
+                    else
+                        button.style.setProperty('--y', `${currentOffsetY + offsetY}px`);
+                } else {
+                    button.style.setProperty('--x', `${currentOffsetX * 0.9}px`);
+                    button.style.setProperty('--y', `${currentOffsetY * 0.9}px`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

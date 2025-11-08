@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Pizza Web Source Code</title>
+<script src="index.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+html {
+  font-family: "Gemunu Libre", serif;	
+}
+
+.info {
+  color: 444444;
+  font-size: 0.75em;
+}
+
+.key {
+  border: 2px solid #333333;
+  border-radius: 5px;
+  background-color: #999999;
+  padding: 3px;
+  margin: 3px;
+}
+
+.code {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.75vw;
+  border: 2px solid #111111;
+  border-radius: 5px;
+  background-color: #DDDDDD;
+  padding: 3px;
+  margin: 3px;
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 3px solid #11AA11;
+  background-color:99CC99;
+  font-size: 1.5em;
+}
+</style>
+<h1>Source code to this page</h1>
+HTML-clde (Hint: you do not need anything special from it to complete the chall)
+<p class="info">You can use <b class="key">Ctrl</b><b class="key">U</b> (or <b class="key">Option</b><b class="key">Cmd</b><b class="key">U</b> in MacOS) to see the page source</p>
+Source code to /pizza_order/order (Java Servlet)
+<pre class="code">
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.util.*;
+import org.apache.commons.text.StringSubstitutor;
+
+
+public class OrderServlet extends HttpServlet
+{
+	StringSubstitutor ipl = StringSubstitutor.createInterpolator();
+	Map&lt;String, String> valuesMap = new HashMap&lt;String, String>();
+	Map&lt;String, String> pizzasMap = new HashMap&lt;String, String>();
+	String pizzatype = "";
+	String address = "";
+	String message = "&lt;h1>You have ordered a $${pizza-${type}} to the address ${address}&lt;/h1>";
+	String output = "";
+	
+	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException {
+		
+		
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		
+		pizzatype = request.getParameter("type");
+		address = request.getParameter("address");
+		valuesMap.put("type", pizzatype);
+		valuesMap.put("address", address.replaceAll("\\{|\\}","|"));
+		pizzasMap.put("pizza-pineapple", "pizza with pineapple");
+		pizzasMap.put("pizza-pepperoni", "pepperonipizza");
+		pizzasMap.put("pizza-funghi", "pizza med funghi");
+		pizzasMap.put("pizza-cheese", "pizza with extra cheese");
+		
+		output = ipl.replace(ipl.replace(message,valuesMap),pizzasMap);
+		
+		//todo: add saving to file
+		
+		out.println("&lt;html>&lt;head>&lt;title>Pizza Web&lt;/title>&lt;/head>&lt;body>");
+		out.println(ipl.replace(output));
+		out.println("&lt;p>You will soon be sent to another page. This is just a page to register your order.&lt;/p>&lt;script src='index.js'>&lt;/script>&lt;script>finishOrder()&lt;/script>&lt;/body>&lt;/html>");
+	}
+}
+</pre>
+<a href="/pizza_order" class="top">Back to ordering pizzas</a>
+</body>
+</html>

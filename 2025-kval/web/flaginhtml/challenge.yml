@@ -1,0 +1,33 @@
+title: Flag in HTML
+description: Första flaggan är gratis! och finns i HTML-en!
+authors:
+  - Movitz Sunar
+categories:
+  - web
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: 1nsp3kt3r4_0ch_uppt4ck
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:50200
+
+service:
+  type: website
+  image: container
+  internal_port: 80
+  external_port: 50200
+
+# downloadable_files:
+#   - container/index.php
+
+score: 100
+challenge_id: d7d4d897-8830-4f8a-8824-9d5d336f26a7
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

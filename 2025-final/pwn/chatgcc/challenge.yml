@@ -1,0 +1,33 @@
+title: ChatGCC
+description: i love chatting with gcc 💞💞💞💞 (NOTE flag is in /flag.txt) good luck 🤑
+authors:
+    - Valter Mann
+categories:
+    - pwn
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: what_the_hell_is_a_trigraph_bruh
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 50232
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 50232
+
+# downloadable_files:
+#   - container/service
+
+challenge_id: 5315e18a-fc8f-4400-896a-b1987edd41db
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final

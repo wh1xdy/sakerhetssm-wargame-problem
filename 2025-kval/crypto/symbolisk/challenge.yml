@@ -1,0 +1,25 @@
+title: Symbolisk
+description: "Symbolismer är kraftfulla. (Lägg flaggan i SSM{...} innan du skickar in.)"
+authors:
+  - mkg
+categories:
+  - crypto
+
+flag_format_prefix: SSM{
+flags:
+  - flag: signsofhiddenmeanings
+  - flag: SIGNSOFHIDDENMEANINGS
+
+downloadable_files:
+  - '---KVALIFICERAT_HEMLIG---.txt'
+  - 'Meddelande #452.txt'
+
+score: 100
+challenge_id: 232b58da-2c1a-4c53-aa30-9bbd3a786776
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

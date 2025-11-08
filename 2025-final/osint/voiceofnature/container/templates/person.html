@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrStalker - Person</title>
+    <style>
+        :root {
+            font-family: Consolas, 'Courier New', Courier, monospace;
+        }
+        h1 a {
+            color: initial;
+            text-decoration: none;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        ul {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="/">MrStalker</a></h1>
+    <main>
+        <span>Name: {{ person.name }}</span>
+        <span>Personal Number: {{ person.personalnumber }}</span>
+        <span>Gender (legal): {{ person.gender }}</span>
+        <span>Address: {{ person.address.street }}, {{ person.address.postalCode }} {{ person.address.city }}</span>
+        <span>Interests:</span>
+        <ul>
+        {% for interest in person.interests %}
+            <li>{{ interest }}</li>
+        {% endfor %}
+        </ul>
+        {% if flag %}
+        {{ flag }}
+        {% endif %}
+    </main>
+</body>
+</html>

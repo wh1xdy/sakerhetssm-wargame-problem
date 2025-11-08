@@ -1,0 +1,41 @@
+title: Baby, baby, baby, oh
+description: "Blockchain må verka svårt, men frukta inte, den här utmaningen är för bäbisar, ja precis för dig! 
+I denna utmaning kommer du få en privat Ethereum-blockkedja, där det kommer finnas olika smarta kontrakt du kan interagera med!
+<br><br>
+För att lösa denna utmaning och få flaggan krävs det att funktionen <code>isSolved</code> i <code>Setup.sol</code> returnerar <code>true</code>.
+Dessutom får du ett skript <code>template.py</code> som underlättar processen att interagera med blockkedjan :)
+<br><br>
+För att få en bra grund inom blockchain och smarta kontrakt rekommenderar vi att du läser följande:
+<a href='https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html' target='_blank'>Introduktion till smarta kontrakt</a>"
+
+authors:
+  - LiamoOo
+categories:
+  - blockchain
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: "vad_är_det_bäbisar_brukar_säga?skibidi!"
+
+deployment:
+  type: docker
+  containers:
+    web:
+      image: ./container
+      services:
+        - type: tcp
+          internal_port: 1337
+      extra_exposed_ports:
+        - internal_port: 31337
+          external_port: 31337
+
+downloadable_files:
+  - chall.zip
+
+
+score: 200
+challenge_id: 2c1251c4-0da0-42f1-a646-4e7b049f49d3
+spec: 0.0.1
+
+custom:
+  order: 61

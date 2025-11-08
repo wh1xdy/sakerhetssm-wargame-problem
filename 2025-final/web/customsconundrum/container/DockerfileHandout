@@ -1,0 +1,29 @@
+FROM mcr.microsoft.com/playwright/python:v1.50.0-jammy
+
+RUN apt-get update && apt-get install -y supervisor
+
+RUN mkdir -p /var/log/supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+RUN mkdir /app
+COPY /app /app
+
+RUN mkdir /admin
+COPY /admin /admin
+
+RUN mkdir /bot
+COPY /bot /bot
+
+RUN mkdir /proxy
+COPY /proxy /proxy
+
+RUN pip install fastapi naja-atra playwright sqlalchemy passlib python-jose jinja2 marko uvicorn python-multipart aiohttp
+
+ENV ADMIN_API_KEY=admin_api_key
+ENV ADMIN_KEY=admin_key
+ENV SECRET_JWT_KEY=secret_jwt_key
+ENV FLAG=SSM{fake_flag}
+
+EXPOSE 8080 8083
+
+CMD ["/usr/bin/supervisord"]

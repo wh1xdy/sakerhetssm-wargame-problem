@@ -1,0 +1,23 @@
+title: Alkolås
+description: Min kompis tröttnade på mina midnatts-DMs och installerade ett alkolås på min dator. Jag tror jag är nykter nu men får ändå inte upp den, kan du hjälpa mig?
+authors:
+  - Valter Wik
+categories:
+  - reversing
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: c0mput3_r3sp0nsibly_k1ds
+
+downloadable_files:
+  - chall
+
+score: 300
+challenge_id: d54e8f07-f662-4b31-a609-a3b440a8a9c7
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

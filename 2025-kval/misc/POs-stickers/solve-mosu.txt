@@ -1,0 +1,12 @@
+Öppnade SVG i webbläsaren och började radera element, såg då att det fanns text under.
+
+Det går att vara lite smart och inse att elementen som representerar bokstäver är enheltiga och börjar på...
+
+
+<g xmlns="http://www.w3.org/2000/svg" fill="#000000" fill-opacity="1">
+
+Alltså ska alla andra element under dem bort!
+
+Eller.... så kan man vara smart och inse att elementen som kommer sist ligger överts, och därför ska de första elementen vara kvar!
+
+SSM{UP50!V3_PO_4_5T!CK3RS_5SG5SG}

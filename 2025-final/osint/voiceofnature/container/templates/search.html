@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrStalker - Search</title>
+    <style>
+        :root {
+            font-family: Consolas, 'Courier New', Courier, monospace;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+        li > a {
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            color: initial;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+        }
+        nav > :is(span,a) {
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1><a href="/">MrStalker</a></h1>
+        <h2>You searched for: {{ query }}</h2>
+        <ul>
+            {% for person in results %}
+            <li>
+                <a href="person?personalnumber={{ person.personalnumber | urlencode }}">
+                    <span>
+                        {{ person.name }}, {{ person.personalnumber }} ({{ person.gender }})
+                    </span>
+                    <span>
+                        {% for interest in person.interests %}
+                        {{ interest }}
+                        {% endfor %}
+                    </span>
+                    <span>
+                        {{ person.address.street }}, {{ person.address.postalCode }} {{ person.address.city }}
+                    </span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <nav>
+            <a href="{{ prevPage }}">&lt;</a>
+            <span>{{ pageNum }}</span>
+            <a href="{{ nextPage }}">&gt;</a>
+        </nav>
+    </main>
+</body>
+</html>

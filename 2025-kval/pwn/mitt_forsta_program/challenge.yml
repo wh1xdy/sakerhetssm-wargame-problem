@@ -1,0 +1,39 @@
+title: Mitt första program
+description: Jag skrev precis mitt första program i C! Vill du testa? 🥰
+authors:
+  - Valter Wik
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: y0u_br0k3_1t_:(
+
+downloadable_files:
+  - container/chall
+  - chall.c
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 50209
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 50209
+
+custom:
+  build_script: build.sh
+
+score: 300
+challenge_id: a3aaa9fd-d95b-41f0-8246-fad91cd68802
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Kval

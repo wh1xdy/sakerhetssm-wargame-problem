@@ -1,0 +1,1 @@
+strace ca_generator -certpath /work/cert.pem -keypath /work/key.pem 2>/var/log/debuglog

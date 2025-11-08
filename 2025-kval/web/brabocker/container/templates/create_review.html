@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Skapa recension - Bra Böcker</title>
+  </head>
+
+  <body>
+    <h1>Bra Böcker</h1>
+    <h2>Skapa recension</h2>
+    <form method="post">
+      <label>
+        <span>Titel:</span>
+        <input
+          required
+          type="text"
+          name="title"
+          placeholder="En riktig banger!"
+        />
+      </label>
+      <br />
+      <label>
+        <span>Bokens titel:</span>
+        <input
+          required
+          type="text"
+          name="book_title"
+          placeholder="Honungsapan"
+        />
+      </label>
+      <br />
+      <label>
+        <span>ISBN:</span>
+        <input
+          required
+          type="text"
+          name="book_title"
+          placeholder="978-9189318021"
+        />
+      </label>
+      <br />
+      <label>
+        <span>Betyg:</span>
+        <input
+          required
+          type="number"
+          name="rating"
+          value="5"
+          min="1"
+          max="10"
+          step="1"
+        />
+      </label>
+      <br />
+      <label>
+        <div>Recension:</div>
+        <textarea
+          required
+          name="review"
+          rows="20"
+          cols="80"
+          placeholder="Boken handlar om Bosse..."
+        ></textarea>
+      </label>
+      <br />
+      <label>
+        <span>Utkast:</span>
+        <input type="checkbox" name="is_draft" />
+      </label>
+      <div>
+        <input type="submit" value="Skapa recension" />
+      </div>
+    </form>
+  </body>
+</html>

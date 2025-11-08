@@ -1,0 +1,36 @@
+title: Certifierbart säkert🖨️❌ 🧢
+description: >
+  OMG, en sjukt sus hotaktör har försökt hacka svenska myndigheter 😱🇸🇪. De kör tydligen en admin-konsol som snackar via TLS 🔒🤯. Vi hittade dessutom en Docker-container 🐳 som verkar ha använts för att mecka fram TLS-certet. Så shady! ⚠️👀 
+authors:
+  - Försvarets Radioanstalt
+categories:
+  - forensics
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: null
+flags:
+  - flag: SSM{cert1fierb4rt_osakert_cert1fik4t}
+  - flag: ssm{cert1fierb4rt_osakert_cert1fik4t}
+
+downloadable_files:
+  - cert/container.tar.gz
+  - client/client.go
+
+service:
+   type: website
+   image: client
+   internal_port: 1337
+   external_port: 50227
+   
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:50227
+
+challenge_id: 76d3028d-7686-4f04-945d-db761ae864fa
+spec: 0.0.1
+
+custom:
+  publish: false
+
+human_metadata:
+  event_name: SSM 2025 Final
