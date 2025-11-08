@@ -23,6 +23,8 @@ predefined_services:
   host: ssmarkiv.ctfchall.se
   port: 50235
 
+score: 500
+
 challenge_id: bec097ae-0395-4ddd-85d1-d1ccd5469588
 spec: 0.0.1
 

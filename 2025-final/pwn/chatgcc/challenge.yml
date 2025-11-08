@@ -23,6 +23,8 @@ predefined_services:
 # downloadable_files:
 #   - container/service
 
+score: 450
+
 challenge_id: 5315e18a-fc8f-4400-896a-b1987edd41db
 spec: 0.0.1
 
