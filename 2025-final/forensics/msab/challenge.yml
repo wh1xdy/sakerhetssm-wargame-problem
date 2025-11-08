@@ -12,6 +12,8 @@ flags: what's_up_with_this_flag
 downloadable_files:
   - phone_root.zip
 
+score: 400
+
 challenge_id: 056d189c-ea5c-4f63-b599-a170d8303955
 spec: 0.0.1
 

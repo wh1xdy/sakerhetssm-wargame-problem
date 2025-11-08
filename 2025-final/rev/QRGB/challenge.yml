@@ -21,6 +21,8 @@ predefined_services:
 downloadable_files:
   - container/flag.png
 
+score: 500
+
 challenge_id: d1ae99c8-c025-4416-ad34-7cd1c0b162db
 spec: 0.0.1
 

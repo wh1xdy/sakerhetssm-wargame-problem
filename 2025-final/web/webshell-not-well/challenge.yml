@@ -21,6 +21,8 @@ predefined_services:
 downloadable_files:
   - container/c99.php
 
+score: 150
+
 challenge_id: 2a4edfcd-3df6-44ed-9510-8106634eda3a
 spec: 0.0.1
 

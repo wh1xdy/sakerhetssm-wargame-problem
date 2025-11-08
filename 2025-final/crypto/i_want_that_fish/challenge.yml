@@ -83,6 +83,8 @@ predefined_services:
 downloadable_files:
   - container/apparatus.py
 
+score: 500
+
 challenge_id: 91e2b2b5-bbd2-4170-a12f-654fc933e57e
 spec: 0.0.1
 

@@ -12,6 +12,7 @@ downloadable_files:
   - main.py
   - output.txt
 
+score: 100
 
 challenge_id: 5625f95a-9e99-4fde-91c4-c45ec1fafae0
 spec: 0.0.1

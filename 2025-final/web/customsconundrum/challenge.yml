@@ -29,6 +29,8 @@ predefined_services:
 - type: website
   url: http://ssmarkiv.ctfchall.se:50221
 
+score: 450
+
 challenge_id: ebf41a15-412c-419f-95b9-9640a34e8cf6
 spec: 0.0.1
 
