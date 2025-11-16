@@ -11,13 +11,13 @@ flags: https://media.tenor.com/hzFHhdvD3lAAAAAM/gato-joia.gif#
 
 predefined_services:
 - type: website
-  url: http://ssmarkiv.ctfchall.se:40175
+  url: http://ssmarkiv.ctfchall.se:40176
 
 service:
   type: website
   image: .
   internal_port: 80
-  external_port: 40175
+  external_port: 40176
 
 score: 500
 challenge_id: 475eb718-0fe9-461b-8a31-f9e565f18940
