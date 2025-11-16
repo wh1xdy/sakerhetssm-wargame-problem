@@ -27,7 +27,7 @@ flags: icl_ts_pmo_sm_rn_r_u_fr_rn_lol
 predefined_services:
   - type: tcp
     host: ssmarkiv.ctfchall.se
-    port: 40095
+    port: 48394
 
 downloadable_files:
   - container/contracts/Coin.sol
