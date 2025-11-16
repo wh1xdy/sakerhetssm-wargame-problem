@@ -12,11 +12,11 @@ service:
    type: website
    image: container
    internal_port: 80
-   external_port: 50224
+   external_port: 40167
    
 predefined_services:
 - type: website
-  url: http://ssmarkiv.ctfchall.se:50224
+  url: http://ssmarkiv.ctfchall.se:40167
 
 downloadable_files:
   - container/c99.php

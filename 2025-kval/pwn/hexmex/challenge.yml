@@ -13,13 +13,13 @@ service:
   type: tcp
   image: container
   internal_port: 1337
-  external_port: 50206
+  external_port: 40187
   privileged: true
 
 predefined_services:
 - type: tcp
   host: ssmarkiv.ctfchall.se
-  port: 50206
+  port: 40187
 
 downloadable_files:
   - container/challenge.py

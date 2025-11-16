@@ -20,10 +20,10 @@ service:
    type: website
    image: container
    internal_port: 3000
-   external_port: 50222
+   external_port: 40165
 predefined_services:
 - type: website
-  url: http://ssmarkiv.ctfchall.se:50222
+  url: http://ssmarkiv.ctfchall.se:40165
 
 score: 250
 

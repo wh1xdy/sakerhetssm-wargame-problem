@@ -12,13 +12,13 @@ service:
   type: tcp
   image: container
   internal_port: 1337
-  external_port: 50232
+  external_port: 40095
   privileged: true
 
 predefined_services:
 - type: tcp
   host: ssmarkiv.ctfchall.se
-  port: 50232
+  port: 40095
 
 # downloadable_files:
 #   - container/service

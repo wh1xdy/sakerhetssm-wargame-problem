@@ -74,13 +74,13 @@ service:
   type: tcp
   image: container
   internal_port: 1337
-  external_port: 50229
+  external_port: 40017
   privileged: true
 
 predefined_services:
 - type: tcp
   host: ssmarkiv.ctfchall.se
-  port: 50229
+  port: 40017
 
 downloadable_files:
   - container/apparatus.py

@@ -15,13 +15,13 @@ service:
   type: tcp
   image: .
   internal_port: 31337
-  external_port: 50207
+  external_port: 40186
   privileged: true
 
 predefined_services:
 - type: tcp
   host: ssmarkiv.ctfchall.se
-  port: 50207
+  port: 40186
 
 score: 500
 challenge_id: 556405a7-2da0-4d8d-b5fc-fd5b871d6666

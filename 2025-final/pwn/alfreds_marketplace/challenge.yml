@@ -16,13 +16,13 @@ service:
   type: tcp
   image: container
   internal_port: 1337
-  external_port: 50231
+  external_port: 40091
   privileged: true
 
 predefined_services:
 - type: tcp
   host: ssmarkiv.ctfchall.se
-  port: 50231
+  port: 40091
 
 score: 500
 

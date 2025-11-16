@@ -17,13 +17,13 @@ service:
   type: tcp
   image: container
   internal_port: 1337
-  external_port: 50209
+  external_port: 40180
   privileged: true
 
 predefined_services:
 - type: tcp
   host: ssmarkiv.ctfchall.se
-  port: 50209
+  port: 40180
 
 custom:
   build_script: build.sh

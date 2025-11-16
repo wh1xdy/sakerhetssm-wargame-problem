@@ -12,11 +12,11 @@ service:
    type: website
    image: container
    internal_port: 1337
-   external_port: 50228
+   external_port: 40016
    
 predefined_services:
 - type: website
-  url: http://ssmarkiv.ctfchall.se:50228
+  url: http://ssmarkiv.ctfchall.se:40016
 
 downloadable_files:
   - container/server.py
