@@ -11,14 +11,19 @@ categories:
 flag_format_prefix: SSM{
 flags: AAAAAAAAaaaaaAAaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAaaaaaaaAaAAaAaaaaaaaaaaaAAAAAAAAAAAAAAAaaaaAAAAaaAaAaaaAAAAAaaahhhhhhhhh
 
-custom_service_types:
-  - type: tls
-    display: ncat --ssl {host} {port}
+#custom_service_types:
+#  - type: tls
+#    display: ncat --ssl {host} {port}
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 40056
 
 service:
   type: tls
   image: container
-  internal_port: 1338
+  internal_port: 1337
   external_port: 40056
   privileged: true
 
@@ -30,7 +35,7 @@ downloadable_files:
 
 custom:
   build_script: build.sh
-
+  publish: true
 challenge_id: 7250cacf-adac-4d89-ad07-68b6837b9ca4
 spec: 0.0.1
 
