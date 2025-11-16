@@ -35,7 +35,7 @@ challenge_id: 36b3c2f1-c047-4fba-a873-2fe447fc4ada
 spec: 0.0.1
 
 custom:
-  publish: false
+  publish: true
 
 human_metadata:
   event_name: SSM 2025 Kval

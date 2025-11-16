@@ -71,14 +71,16 @@ flag_format_prefix: SSM{
 flags: idk-i'll_figure-something-@ut..fish?:P
 
 service:
-   type: website
-   image: container
-   internal_port: 1337
-   external_port: 50229
-   
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 50229
+  privileged: true
+
 predefined_services:
-- type: website
-  url: http://ssmarkiv.ctfchall.se:50229
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 50229
 
 downloadable_files:
   - container/apparatus.py
@@ -89,7 +91,7 @@ challenge_id: 91e2b2b5-bbd2-4170-a12f-654fc933e57e
 spec: 0.0.1
 
 custom:
-  publish: false
+  publish: true
 
 human_metadata:
   event_name: SSM 2025 Final

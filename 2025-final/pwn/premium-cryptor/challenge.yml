@@ -29,7 +29,7 @@ challenge_id: 01a593d6-3a58-40ab-8081-917398744b65
 spec: 0.0.1
 
 custom:
-  publish: false
+  publish: true
 
 human_metadata:
   event_name: SSM 2025 Final
