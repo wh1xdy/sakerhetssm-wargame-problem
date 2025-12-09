@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim AS chroot
+FROM debian:bookworm-slim@sha256:18023f131f52fc3ea21973cabffe0b216c60b417fd2478e94d9d59981ebba6af AS chroot
 
 ARG DEBIAN_FRONTEND="noninteractive"
 RUN apt-get update && apt-get -y install python3
