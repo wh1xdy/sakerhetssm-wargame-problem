@@ -31,7 +31,7 @@ EXPOSE 3333
 
 ENV FLAG="SSM{wow_i_havent_had_this_much_fun_on_a_note_app_ever_63ce9c67bb}"
 ENV PORT=3333
-ENV BASE_URL="https://yet-another-boring-note-app.ctfchall.se:50000/"
+ENV BASE_URL="http://ssmarkiv.ctfchall.se:46916/"
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 
