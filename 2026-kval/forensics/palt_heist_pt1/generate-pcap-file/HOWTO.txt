@@ -1,0 +1,5 @@
+The flag image was generated using https://github.com/trailofbits/anamorpher and binomal scaling.
+Then remember to place the image in teh website-traffic folder under admin-traffic and KBBolaget.
+Name the flag image palt.png. Then run first email-traffic docker-compose, and then change the date
+before running website-traffic. After that concatenate the two pcap files using
+mergecap -w chall.pcapng traffic.pcap traffic1.pcap

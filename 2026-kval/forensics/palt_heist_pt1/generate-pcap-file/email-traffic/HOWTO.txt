@@ -1,0 +1,1 @@
+First run docker compose and then start a network capture on the docker interface for port 1025. Save this to a pcap file. When everything is running run the Mail.sh

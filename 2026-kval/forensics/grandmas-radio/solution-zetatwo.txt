@@ -1,0 +1,7 @@
+1. git clone https://github.com/wojlin/WEFAX
+2. apt-get install portaudio19-dev
+3. pip install -r requirements.txt
+4. ffmpeg -i radio_capture.mp3 radio_capture.wav
+5. python main.py
+6. upload wav file in web interface
+7. flag in image

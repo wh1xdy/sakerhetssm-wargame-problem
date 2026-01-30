@@ -1,0 +1,34 @@
+title: "alias $cmd='exit #'"
+description: Oh no! I accidentally aliased all my commands to `exit`! Can you help me get my flag back?
+authors:
+  - AndreasLonn
+categories:
+  - misc
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: th4nk_y0u_f0r_f1nd1ng_my_sup3rs3cr3t_fl4g!
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46793
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46793
+# downloadable_files:
+#   - container/service
+
+challenge_id: b40ee5fe-d6bb-45b4-8665-7d76c995cb56
+spec: 0.0.1
+
+score: 150
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

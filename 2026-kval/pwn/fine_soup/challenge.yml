@@ -1,0 +1,36 @@
+title: fine soup
+description: i'm craving some soup, can you help me cook the finest soup?
+authors:
+  - LiamoOo
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: wooooooahhh_this_soup_is_fireeee
+
+downloadable_files:
+  - container/chall
+  - libc.so.6
+  - ld-linux-x86-64.so.2
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46796
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46796
+challenge_id: 4b7c9bf4-cc63-4a91-b89d-e4b6e7283e5d
+spec: 0.0.1
+
+score: 500
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

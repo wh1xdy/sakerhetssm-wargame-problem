@@ -1,0 +1,23 @@
+title: Crystal Ball
+description: Stare into the crystal ball and tell me what you see
+authors:
+  - ZetaTwo
+categories:
+  - reversing
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: I_see_3ndless_gl0ry
+
+downloadable_files:
+  - crystal-ball
+
+challenge_id: 4da0ff8d-ce8e-4426-98d9-25addd2fb134
+spec: 0.0.1
+
+score: 250
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

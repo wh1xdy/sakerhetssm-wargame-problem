@@ -1,0 +1,64 @@
+version: "3.9"
+
+services:
+  smtp:
+    build: ./smtp_server
+    container_name: smtp
+    ports:
+      - "1025:1025"
+    networks:
+      - ctf_net
+      
+  flask:
+    build: ./flask_app
+    container_name: flask
+    depends_on:
+      - smtp
+    ports:
+      - "5000:5000"
+    networks:
+      - ctf_net
+
+  bot1:
+    build: ./bot1
+    container_name: bot1
+    depends_on:
+      - smtp
+    networks:
+      - ctf_net
+
+  traffic-bot:
+    build: ./traffic-bot
+    container_name: traffic-bot1
+    depends_on:
+      - flask
+    networks:
+      - ctf_net
+
+  traffic-bot2:
+    build: ./traffic-bot
+    container_name: traffic-bot2
+    depends_on:
+      - flask
+    networks:
+      - ctf_net
+  
+  kbbolaget:
+    build: ./KBBolaget
+    container_name: kbbolaget
+    depends_on:
+      - flask
+    networks:
+      - ctf_net
+
+  admin-traffic:
+    build: ./admin-traffic
+    container_name: admin-traffic
+    depends_on:
+      - flask
+    networks:
+      - ctf_net
+      
+networks:
+  ctf_net:
+    driver: bridge

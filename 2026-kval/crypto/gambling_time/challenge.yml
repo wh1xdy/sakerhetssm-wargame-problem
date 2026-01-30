@@ -1,0 +1,33 @@
+title: Let's go gambling!
+description: KeBaB Innovation Group has opened a netcat (online) casino that cannot be cheated.  Surely you cannot count cards if there aren't any?
+authors:
+  - David Bergström
+categories:
+  - crypto
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: M4y_7h3_d1ce_8e_w1th_y0u
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46790
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46790
+downloadable_files:
+  - container/service
+
+challenge_id: aa244e56-5b91-4e59-8bdd-f28a35491e01
+spec: 0.0.1
+
+score: 350
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

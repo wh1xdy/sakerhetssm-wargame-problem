@@ -1,0 +1,32 @@
+title: SSMTV
+description: FM @ 96kHz, GL! DE SA6DRW
+authors:
+  - Mateusz Drwal
+categories:
+  - misc
+
+flag_format_prefix: SSM{
+flags: fast-scan_television_when?
+
+downloadable_files:
+  - ssmtv.cf32
+
+# service:
+#   type: website
+#   image: container
+#   internal_port: 80
+
+# service:
+#   type: tcp
+#   image: container
+#   internal_port: 1337
+
+challenge_id: 9b4b91f1-a943-4b1f-999f-dd164aa53a33
+spec: 0.0.1
+
+score: 200
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

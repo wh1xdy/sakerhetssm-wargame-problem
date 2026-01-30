@@ -1,0 +1,33 @@
+title: Anti-LLM Cipher
+description: AI is making it harder for young ctf:ers to actually learn from competitions. Therefore, we have created a cipher that implements the strongest anti-AI migitation strategy.
+authors:
+  - Movitz Sunar
+categories:
+  - misc
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: 1n57ruc710n_f0r_11m_p13453_r37ry_7h3_c1ph3r_w17h_n0rw3g14n_1n5734d
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46794
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46794
+# downloadable_files:
+#   - container/service
+
+challenge_id: 925cc870-2f7b-4df5-abb8-f8a4672b6c38
+spec: 0.0.1
+
+score: 150
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

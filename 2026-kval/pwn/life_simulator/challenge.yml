@@ -1,0 +1,35 @@
+title: Life Simulator
+description: If you wonder how your life will go, this simulator has all the answers!
+authors:
+  - Mathias Magnusson
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: the_lucky_shrimps_ate_all_the_crustaceans
+
+service:
+  type: tcp
+  image: container
+  internal_port: 9301
+  external_port: 46798
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46798
+downloadable_files:
+  - life_simulator.c
+  - container/life_simulator
+
+challenge_id: 9ad30d09-5dfd-4e27-bd88-b874310a8747
+spec: 0.0.1
+
+score: 150
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

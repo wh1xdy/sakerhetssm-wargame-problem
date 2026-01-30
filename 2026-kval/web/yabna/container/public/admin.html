@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Bot</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body,
+      button,
+      input {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      }
+      body {
+        margin: 0;
+        padding: 48px 24px;
+        background: linear-gradient(135deg, #f7efe3, #eef3ff);
+        color: #1d1d1d;
+      }
+      main {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 36px 32px;
+        background: #ffffff;
+        border: 1px solid #e6e1d4;
+        box-shadow: 0 16px 30px rgba(20, 20, 20, 0.1);
+      }
+      h1 {
+        font-size: 34px;
+        margin: 0 0 10px;
+      }
+      p {
+        margin: 0 0 24px;
+        font-size: 17px;
+        color: #3a3a3a;
+      }
+      form {
+        display: grid;
+        gap: 14px;
+      }
+      label {
+        font-weight: 600;
+      }
+      input[type="url"] {
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid #d6d6d6;
+        font-size: 16px;
+        background: #fbfaf6;
+      }
+      button {
+        justify-self: start;
+        padding: 12px 22px;
+        border-radius: 999px;
+        border: none;
+        background: #1b3d8f;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #16306e;
+      }
+      .status {
+        margin-top: 18px;
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: #f4f6fb;
+        border: 1px solid #dfe5f2;
+        color: #1b2b4a;
+      }
+      .status.error {
+        background: #ffe9e9;
+        border-color: #f0b4b4;
+        color: #7b1a1a;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Admin bot visit</h1>
+      <p>Paste a URL and the admin bot will visit it.</p>
+      <form id="admin-form">
+        <label for="admin-url">URL to visit</label>
+        <input
+          type="url"
+          id="admin-url"
+          name="url"
+          placeholder="https://example.com"
+          required
+        />
+        <button type="submit">Send to admin</button>
+      </form>
+      <div class="status" id="status" hidden></div>
+    </main>
+    <script src="/admin.js" defer></script>
+  </body>
+</html>

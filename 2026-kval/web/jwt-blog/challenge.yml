@@ -1,0 +1,31 @@
+title: JWT Blog
+description: Someone has just implemented JSON Web Tokens on their blog, and shared a valid token. What could possibly go wrong?
+authors:
+  - AndreasLonn
+categories:
+  - web
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: ba$e64_sh3n@n1gan$
+
+service:
+  type: website
+  image: container
+  internal_port: 1337
+  external_port: 46912
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:46912
+# downloadable_files:
+#   - container/server.py
+
+challenge_id: 3ab6762d-3947-44e8-a03f-317675075959
+spec: 0.0.1
+
+score: 250
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

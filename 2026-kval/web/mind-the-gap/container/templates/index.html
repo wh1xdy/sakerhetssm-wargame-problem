@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTFront - Defend Your Knowledge</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main>
+    <img src="/static/logo.png" alt="CTFront Logo" class="logo" />
+    <h1>Search our database for CTF questions and answers</h1>
+
+    <form id="searchForm" role="search">
+      <label for="query">Search FAQs</label>
+      <input
+        type="text"
+        id="query"
+        name="query"
+        placeholder="E.g. ctf, tools"
+        autocomplete="off"
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="error" class="error" role="alert"></div>
+    <section id="results" class="results" aria-live="polite"></section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

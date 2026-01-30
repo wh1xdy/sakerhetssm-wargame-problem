@@ -1,0 +1,123 @@
+<svg viewBox="0 0 1200 1200" style="background-color: navy" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        #boat path {
+            animation: ghi 4s infinite ease-in-out -3s;
+            fill: none;
+            stroke: white;
+            stroke-linejoin: round;
+        }
+        #boat {
+            animation: jkl 4s infinite ease-in-out -2s;
+            transform: translate(220px, 260px) scale(8.0);
+        }
+
+        @keyframes ghi {
+            from, to {
+                transform: translate(45px, 65px) rotate(-10deg) translate(-45px, -65px);
+            }
+            50% {
+                transform: translate(45px, 65px) rotate(10deg) translate(-45px, -65px);
+            }
+        }
+
+        @keyframes jkl {
+            from, to {
+                transform: translate(220px, 180px) scale(8.0);
+            }
+            50% {
+                transform: translate(220px, 340px) scale(8.0);
+            }
+        }
+
+        #clock {
+            transform: translate(calc(292800px * sqrt(var(--a) + 395856) / 2928), calc(27200px * sqrt(var(--c) - 2376236) / 272));
+        }
+        #abc {
+            transform: translate(50px, 50px) rotate(calc(sqrt(var(--d) + 282) / 864 * 25920deg)) translate(-50px, -50px);
+            animation: mno 1.5s;
+        }
+        #def {
+            transform: translate(50px, 50px) rotate(calc(sqrt(var(--b) - 19234) / 160320 * 961920deg)) translate(-50px, -50px);
+            animation: mno 1.5s;
+        }
+        @keyframes mno {
+            from {
+                transform: translate(50px, 50px) rotate(0deg) translate(-50px, -50px);
+            }
+        }
+    </style>
+
+    <defs>
+        <line id="tick" x1="50" x2="50" y1="4" y2="10" stroke="black" stroke-width="0.5" />
+
+        <g id="clock">
+            <circle cx="50" cy="50" r="50" fill="black" />
+            <circle cx="50" cy="50" r="48" fill="white" />
+
+            <use xlink:href="#tick" transform="rotate(  0 50 50)" />
+            <use xlink:href="#tick" transform="rotate( 30 50 50)" />
+            <use xlink:href="#tick" transform="rotate( 60 50 50)" />
+            <use xlink:href="#tick" transform="rotate( 90 50 50)" />
+            <use xlink:href="#tick" transform="rotate(120 50 50)" />
+            <use xlink:href="#tick" transform="rotate(150 50 50)" />
+            <use xlink:href="#tick" transform="rotate(180 50 50)" />
+            <use xlink:href="#tick" transform="rotate(210 50 50)" />
+            <use xlink:href="#tick" transform="rotate(240 50 50)" />
+            <use xlink:href="#tick" transform="rotate(270 50 50)" />
+            <use xlink:href="#tick" transform="rotate(300 50 50)" />
+            <use xlink:href="#tick" transform="rotate(330 50 50)" />
+
+            <line id="abc" x1="50" x2="50" y1="50" y2="25" stroke="black" stroke-width="1.5" />
+            <line id="def" x1="50" x2="50" y1="50" y2="15" stroke="black" stroke-width="1" />
+
+            <circle cx="50" cy="50" r="2" fill="black" />
+            <circle cx="50" cy="50" r="1" fill="white" />
+        </g>
+    </defs>
+
+    <use xlink:href="#clock" style="--b: 21938; --c: 2376357; --d: -233; --a: -395820" />
+    <use xlink:href="#clock" style="--c: 2376236; --a: -395735; --b: 20134; --d: -246" />
+    <use xlink:href="#clock" style="--d: -201; --c: 2376237; --b: 19718; --a: -395735" />
+    <use xlink:href="#clock" style="--c: 2376285; --d: -161; --b: 20134; --a: -395856" />
+    <use xlink:href="#clock" style="--b: 19718; --a: -395855; --c: 2376236; --d: -201" />
+    <use xlink:href="#clock" style="--c: 2376357; --a: -395735; --d: -233; --b: 20134" />
+    <use xlink:href="#clock" style="--c: 2376357; --b: 19459; --d: -201; --a: -395756" />
+    <use xlink:href="#clock" style="--b: 19459; --d: -233; --a: -395735; --c: 2376245" />
+    <use xlink:href="#clock" style="--c: 2376236; --d: -182; --b: 19234; --a: -395756" />
+    <use xlink:href="#clock" style="--b: 20134; --a: -395856; --d: -246; --c: 2376357" />
+    <use xlink:href="#clock" style="--b: 19718; --d: -233; --a: -395831; --c: 2376357" />
+    <use xlink:href="#clock" style="--b: 20134; --d: -201; --a: -395840; --c: 2376236" />
+    <use xlink:href="#clock" style="--b: 19234; --d: -201; --c: 2376261; --a: -395735" />
+    <use xlink:href="#clock" style="--d: -201; --b: 21938; --a: -395735; --c: 2376285" />
+    <use xlink:href="#clock" style="--c: 2376357; --d: -182; --a: -395792; --b: 19234" />
+    <use xlink:href="#clock" style="--a: -395855; --b: 19718; --c: 2376357; --d: -246" />
+    <use xlink:href="#clock" style="--b: 20678; --d: -201; --a: -395807; --c: 2376357" />
+    <use xlink:href="#clock" style="--d: -201; --c: 2376336; --b: 20134; --a: -395856" />
+    <use xlink:href="#clock" style="--b: 19298; --d: -246; --a: -395735; --c: 2376240" />
+    <use xlink:href="#clock" style="--c: 2376236; --b: 19459; --a: -395852; --d: -233" />
+    <use xlink:href="#clock" style="--c: 2376236; --a: -395792; --b: 19234; --d: -233" />
+    <use xlink:href="#clock" style="--a: -395735; --d: -281; --c: 2376336; --b: 19459" />
+    <use xlink:href="#clock" style="--d: -233; --a: -395856; --c: 2376300; --b: 20134" />
+    <use xlink:href="#clock" style="--b: 19234; --a: -395840; --d: -233; --c: 2376357" />
+    <use xlink:href="#clock" style="--d: -182; --b: 19234; --a: -395856; --c: 2376252" />
+    <use xlink:href="#clock" style="--c: 2376317; --b: 19298; --d: -246; --a: -395735" />
+    <use xlink:href="#clock" style="--d: -233; --c: 2376236; --b: 20134; --a: -395820" />
+    <use xlink:href="#clock" style="--a: -395735; --c: 2376272; --d: -201; --b: 20678" />
+    <use xlink:href="#clock" style="--a: -395856; --c: 2376317; --d: -201; --b: 19459" />
+    <use xlink:href="#clock" style="--d: -233; --b: 19718; --c: 2376357; --a: -395852" />
+    <use xlink:href="#clock" style="--d: -246; --a: -395856; --b: 19298; --c: 2376261" />
+    <use xlink:href="#clock" style="--d: -161; --a: -395807; --c: 2376236; --b: 20134" />
+    <use xlink:href="#clock" style="--d: -138; --b: 20134; --a: -395775; --c: 2376357" />
+    <use xlink:href="#clock" style="--a: -395847; --c: 2376236; --b: 20134; --d: -246" />
+    <use xlink:href="#clock" style="--c: 2376357; --a: -395847; --d: -233; --b: 21938" />
+    <use xlink:href="#clock" style="--d: -201; --a: -395856; --b: 19718; --c: 2376236" />
+    <use xlink:href="#clock" style="--d: -233; --a: -395735; --c: 2376252; --b: 20134" />
+    <use xlink:href="#clock" style="--a: -395735; --b: 19459; --c: 2376300; --d: -201" />
+    <use xlink:href="#clock" style="--b: 19298; --c: 2376236; --d: -246; --a: -395775" />
+    <use xlink:href="#clock" style="--c: 2376236; --d: -201; --a: -395831; --b: 19459" />
+    <use xlink:href="#clock" style="--c: 2376272; --b: 19234; --d: -233; --a: -395856" />
+
+    <g id="boat">
+        <path d="M 50,22 V 52 L 0,51 5,75 h 70 c 0,0 24,-31 15,-33 -3,-1 -6,0 -10,3 V 14 l 6,-2 -2,-6 -26,7 -2,-7 -6,2 2,7 -8,2 2,6 z M 72,47 58,52 V 28 c 1,-9 12,-10 14,-3 z" />
+    </g>
+</svg>

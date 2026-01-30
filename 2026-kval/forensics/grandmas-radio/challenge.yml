@@ -1,0 +1,23 @@
+title: Grandma's Radio
+description: I visited Grandma's house yesterday. We ate palt together while the radio played in the background. However, despite my best effort, I couldn't quite understand the weather report.
+authors:
+  - Palt0verflow
+categories:
+  - forensics
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: w3ird_w34th3r_f0rc4st
+
+downloadable_files:
+  - radio_capture.wav
+
+challenge_id: 3b6fc9eb-bf77-4549-b9a2-aee86b5e1853
+spec: 0.0.1
+
+score: 300
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

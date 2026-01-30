@@ -1,0 +1,37 @@
+title: pointer roulette
+description: pointer goes bbrrr
+authors:
+  - Valter Mann
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: pulled_it_out_into_assembly_grabbed_the_codecave_and_removed_the_polymorphic
+
+downloadable_files:
+  - chall
+  - libc.so.6
+  - ld-linux-x86-64.so.2
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46800
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46800
+
+challenge_id: 34f119e8-62d4-4fbb-a8d7-b0c012ea2adf
+spec: 0.0.1
+
+score: 450
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

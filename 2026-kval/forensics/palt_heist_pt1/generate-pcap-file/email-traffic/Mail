@@ -1,0 +1,39 @@
+#!/bin/bash
+
+curl -X POST http://localhost:5001/send \
+        -H "Content-Type: application/json" \
+        -d '{"subject": "An exiting oppertunity!", "from": "hugh@amazing-ai-creations.ctf", "to": "paltoverflow@paltoverflow.com", "body": "Hi PaltOverflow,\r\n\r\nHope you’re doing well! I wanted to share a simple upgrade that could make your website more fun, interactive, and memorable—especially for visitors who love food, culture, or anything uniquely Scandinavian.\r\n\r\nIntroducing the Pitepalt Image Review Bot:\r\nAn AI-powered tool that automatically rates any uploaded pitepalt image on a 1–100 scale. Whether your users post homemade creations, restaurant dishes, or just want to compete with friends, the bot gives instant feedback with a bit of personality and charm.\r\n\r\nWhat this can do for your website:\r\n\r\n⭐ Increase engagement with a playful, shareable feature\r\n📷 Encourage more user-generated content (images, comments, repeat visits)\r\n🤖 Offer a unique brand touch that sets your site apart\r\n🚀 Boost social sharing—people love showing off their “score”\r\n🧩 Integrate seamlessly into your existing platform\r\n\r\nWe can tailor the bot’s tone—serious food critic, friendly chef, or humorous “grumpy palt judge.” We can also add features like leaderboards, badges, or weekly challenges.\r\n\r\nIf you’re interested, I’d love to show you a quick demo or discuss how this could fit into your website.\r\n\r\nLooking forward to hearing from you!\r\nBest regards,\r\nHugh Man, Sales Person for Amazing AI Creations"}'
+
+echo "First Sent"
+sleep 60
+
+curl -X POST http://localhost:5002/send \
+        -H "Content-Type: application/json" \
+        -d '{"subject": "Re: An exiting oppertunity!", "from": "paltoverflow@paltoverflow.com", "to": "hugh@amazing-ai-creations.ctf", "body": "Hi Hugh,\r\nInteresting premise, but what would be the benefits?"}'
+
+curl -X POST http://localhost:5001/send \
+        -H "Content-Type: application/json" \
+        -d '{"subject": "Re: Re: An exiting oppertunity!", "from": "hugh@amazing-ai-creations.ctf", "to": "paltoverflow@paltoverflow.com", "body": "Hi PaltOverflow,\r\n\r\nTotally fair question! 😊\r\nYou don’t need it — but here’s why it’s worth it:\r\n\r\n✨ Boosts engagement: People love interactive features.\r\n📸 More user content: Users upload pics just to get a score.\r\n🚀 Free visibility: They share their results = more traffic.\r\n🎉 Fun + unique: No one else has a pitepalt-rating bot!\r\n\r\nIt’s a small add-on that brings a lot of activity. Want a quick demo? 😄\r\n\r\nBest,\r\nHugh Man, Sales Person for Amazing AI Creations"}'
+     
+echo "Second"   
+sleep 40
+
+curl -X POST http://localhost:5002/send \
+        -H "Content-Type: application/json" \
+        -d '{"subject": "Re: Re: Re: An exiting oppertunity!", "from": "paltoverflow@paltoverflow.com", "to": "hugh@amazing-ai-creations.ctf", "body": "Hi Hugh,\r\nOkay, we are sold!"}'
+
+curl -X POST http://localhost:5001/send \
+        -H "Content-Type: application/json" \
+        -d '{"subject": "Re: Re: Re: Re: An exiting oppertunity!", "from": "hugh@amazing-ai-creations.ctf", "to": "paltoverflow@paltoverflow.com", "body": "Hi PaltOverflow,\r\n\r\nAwesome — glad to hear it! 😄🙌\r\nI’ll prepare everything so you can try it out.\r\n\r\nExcited to get your pitepalt bot rolling! 🥔🤖✨\r\n\r\nBest,\r\nHugh Man, Sales Person for Amazing AI Creations"}'
+
+echo "Third"
+sleep 100
+
+curl -X POST http://localhost:5002/send \
+        -H "Content-Type: application/json" \
+        -d '{"subject": "Re: Re: Re: Re: Re: An exiting oppertunity!", "from": "paltoverflow@paltoverflow.com", "to": "hugh@amazing-ai-creations.ctf", "body": "Hi Hugh,\r\nJust one small question though. How does the bot work?"}'
+
+curl -X POST http://localhost:5001/send \
+        -H "Content-Type: application/json" \
+        -d '{"subject": "Re: Re: Re: Re: Re: Re: An exiting oppertunity!", "from": "hugh@amazing-ai-creations.ctf", "to": "paltoverflow@paltoverflow.com", "body": "Hi PaltOverflow,\r\n\r\nHow the Pitepalt Image Review Bot Works 🥔🤖\r\n\r\nOur AI bot gives fun, reliable pitepalt ratings thanks to bilinear downscaling. Each uploaded image is downscaled 4x using bilinear interpolation before it reaches the AI, which lets the bot focus on the important details of your dish.\r\n\r\nWhy it matters:\r\n\r\n⚡ Faster ratings: Smaller images mean instant results.\r\n\r\n🎯 Accurate scoring: Downscaling smooths out noise, letting the AI judge the dish, not the background.\r\n\r\n💻 Lightweight & efficient: Your site stays snappy even with lots of uploads.\r\n\r\nResult: instant, fair, and shareable ratings your users will love.\r\n\r\nBest,\r\nHugh Man, Sales Person for Amazing AI Creations"}'
+

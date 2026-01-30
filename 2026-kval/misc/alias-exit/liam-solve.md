@@ -1,0 +1,1 @@
+Testade kommandon typ `ls`, blev exit på en gång. Testade istället `/bin/ls`och det funkade. Då var nästa steg bara att hitta vart flaggan låg. Körde `find / -name "*flag*"` och fick upp `/etc/sup3rs3cr3t/flag.txt` som jag sen körde `/bin/cat /etc/sup3rs3cr3t/flag.txt` på och fick fram flaggan!

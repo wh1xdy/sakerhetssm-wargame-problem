@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Note</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body,
+      button,
+      input {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      }
+      body {
+        margin: 0;
+        padding: 48px 24px;
+        background: linear-gradient(130deg, #f8f0e5, #eff5ff);
+        color: #1c1c1c;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 42px 36px;
+        background: #ffffff;
+        border: 1px solid #e6e2d8;
+        box-shadow: 0 16px 30px rgba(20, 20, 20, 0.08);
+      }
+      h1 {
+        font-size: 40px;
+        letter-spacing: 0.01em;
+        margin: 0 0 10px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0 0 24px;
+        color: #3a3a3a;
+      }
+      form {
+        display: grid;
+        gap: 16px;
+      }
+      label {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      textarea {
+        min-height: 180px;
+        resize: vertical;
+        padding: 14px 16px;
+        border-radius: 12px;
+        border: 1px solid #d4d4d4;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 17px;
+        line-height: 1.5;
+        background: #fdfbf6;
+      }
+      button {
+        justify-self: start;
+        padding: 12px 22px;
+        border-radius: 999px;
+        border: none;
+        background: #1b3d8f;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #16306e;
+      }
+      .report-link {
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 18px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: #f0e6d2;
+        color: #3b2d16;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid #e0d2b7;
+      }
+      .report-link:hover {
+        background: #e9dcc3;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Leave a note</h1>
+      <p>
+        Drop a thought below. You can also <a href="/search">search</a> for
+        notes.
+      </p>
+      <form action="/api/notes" method="post">
+        <label for="note">Your note</label>
+        <textarea
+          id="note"
+          name="note"
+          placeholder="Write something memorable..."
+          required
+        ></textarea>
+        <div>
+          <button type="submit">Create note</button>
+          <a class="report-link" href="/admin">Report a URL to admin</a>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

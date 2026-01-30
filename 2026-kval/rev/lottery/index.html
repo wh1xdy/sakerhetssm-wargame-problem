@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Card Lottery</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 2rem;
+            color: #5f6368;
+        }
+
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #185abc;
+            transform: translateY(-2px);
+        }
+
+        #lottery-view {
+            position: relative;
+        }
+
+        #scratch-card {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 1rem auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: crosshair;
+        }
+
+        #grid-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #scratch-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #result {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            min-height: 2rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script src="lottery.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- View 1: Get a ticket -->
+        <div id="get-ticket-view">
+            <h1>Scratch & Win!</h1>
+            <p>Feeling lucky? Get your free scratch card now!</p>
+            <button id="get-ticket-btn">Get a Ticket</button>
+        </div>
+
+        <!-- View 2: The Lottery -->
+        <div id="lottery-view" class="hidden">
+            <h1>Your Scratch Card</h1>
+            <p>Scratch the card below. Match 3 icons to win!</p>
+            <div id="scratch-card">
+                <canvas id="grid-canvas" width="300" height="300"></canvas>
+                <canvas id="scratch-canvas" width="300" height="300"></canvas>
+            </div>
+            <div id="result"></div>
+            <button id="new-ticket-btn">Get a New Ticket</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>

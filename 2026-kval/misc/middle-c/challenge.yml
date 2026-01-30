@@ -1,0 +1,22 @@
+title: Middle C
+description: Middle C is my favourite note
+authors:
+  - Mateusz Drwal
+categories:
+  - misc
+
+flag_format_prefix: SSM{
+flags: 261.63Hz_my_beloved
+
+downloadable_files:
+  - c.wav
+
+challenge_id: 43181e25-a609-4864-9f66-01f3fc54c94d
+spec: 0.0.1
+
+score: 400
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

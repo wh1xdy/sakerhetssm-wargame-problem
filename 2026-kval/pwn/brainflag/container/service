@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+from os import execl
+
+print('BrainFlag syntax:')
+print('  <  move the memory pointer one step to the left')
+print('  >  move the memory pointer one step to the right')
+print('  +  increment the current memory cell')
+print('  -  decrement the current memory cell')
+print('  [  open a loop')
+print('  ]  close a loop')
+print('  .  print the contents of the current memory cell')
+print('  ,  read into the current memory cell')
+print('  @  throw an exception')
+code = input('Enter the BrainFlag code you want to execute: ')
+
+execl('./brainflag_interpreter', './brainflag_interpreter', code)
+
+

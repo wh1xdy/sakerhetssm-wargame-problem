@@ -1,0 +1,35 @@
+title: Overwhelm
+description: A noble lord, a single input. Make him approve to reveal the flag.
+authors:
+  - Alexander Wedlund
+categories:
+  - pwn
+
+flag_format_prefix: "SSM{"
+flags: h1s_l0rdsh1p_w4s_0v3rwh3lm3d
+
+downloadable_files:
+  - chall.c
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46799
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46799
+custom:
+  build_script: build.sh
+
+challenge_id: eae9605e-50d0-4002-96a5-a85ef64aa0b6
+spec: 0.0.1
+
+score: 100
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

@@ -1,0 +1,4 @@
+Use fldigi click -> View -> Weather Fax Image TX
+Change LPM to 240, upload the image, and press Tx B/W.
+This will play audio from the speakers, use audio loopback
+to record the audio.

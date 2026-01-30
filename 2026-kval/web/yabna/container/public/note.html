@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Note</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body,
+      button,
+      input {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      }
+      body {
+        margin: 0;
+        padding: 48px 24px;
+        background: linear-gradient(120deg, #f8f3e8, #eef5ff);
+        color: #1d1d1d;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 36px 32px;
+        background: #ffffff;
+        border: 1px solid #e6e1d4;
+        box-shadow: 0 16px 30px rgba(20, 20, 20, 0.1);
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+      label {
+        display: block;
+        margin-top: 20px;
+        font-weight: 600;
+      }
+      input[type="text"] {
+        width: 50%;
+        margin-top: 8px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #d6d6d6;
+        font-size: 16px;
+        background: #fbfaf6;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 32px;
+        margin: 0;
+      }
+      .id {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #6e6e6e;
+      }
+      .note {
+        white-space: pre-wrap;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-top: 24px;
+        padding: 18px 20px;
+        background: #fdf8ef;
+        border-left: 4px solid #d1a65a;
+      }
+      .status {
+        margin-top: 24px;
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: #f4f6fb;
+        border: 1px solid #dfe5f2;
+        color: #1b2b4a;
+      }
+      .status.error {
+        background: #ffe9e9;
+        border-color: #f0b4b4;
+        color: #7b1a1a;
+      }
+      a,
+      button {
+        font-size: 16px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 24px;
+        color: #204fa3;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Your note</h1>
+        <input type="text" id="access" placeholder="Flag access token" />
+      </header>
+      <div class="note" id="note-body"></div>
+      <div class="status" id="status" hidden></div>
+      <a href="/">Create another note</a>
+    </main>
+    <script src="/note.js" defer></script>
+  </body>
+</html>

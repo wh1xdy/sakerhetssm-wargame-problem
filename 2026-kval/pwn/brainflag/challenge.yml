@@ -1,0 +1,36 @@
+title: BrainFlag
+description: This is a fool-proof 200% spec-compliant really good implementation of the BrainFlag programming language.
+authors:
+  - David Bergström
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: uV2GZXT0phMRpOet9rtOfneDkGgF8aJp
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46795
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46795
+downloadable_files:
+  - brainflag_interpreter.c
+  - container/brainflag_interpreter
+  - container/service
+
+challenge_id: 9bda116e-32fa-47db-9349-1e220f20bc05
+spec: 0.0.1
+
+score: 350
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

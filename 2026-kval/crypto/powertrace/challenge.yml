@@ -1,0 +1,38 @@
+title: Powertrace
+description: "De säger att din kryptografiskt säkra kod måste köra i konstant tid för att vara säker. 
+Jag säger att det är överdrivet. 
+
+
+Note: Författarens lösningskod ger endast flaggan med 30-40% sannolikhet."
+authors:
+  - Leonard Jarlskog
+categories:
+  - crypto
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: should_have_used_a_montgomery_ladder
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46791
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46791
+downloadable_files:
+  - container/service.py
+
+challenge_id: 0d0c8426-4107-445c-b7c4-ed5b383c0638
+spec: 0.0.1
+
+score: 450
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

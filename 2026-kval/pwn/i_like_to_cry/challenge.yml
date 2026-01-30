@@ -1,0 +1,35 @@
+title: i like to cry
+description: crypto and pwn is never a good combo, lol :D
+authors:
+  - LiamoOo
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: did_you_cry_while_solving_this_chall?_i_did...
+
+downloadable_files:
+  - container/chall
+  - chall.c
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46797
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46797
+challenge_id: 12efc171-9b56-49a3-9d92-b01a763b2eb7
+spec: 0.0.1
+
+score: 350
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

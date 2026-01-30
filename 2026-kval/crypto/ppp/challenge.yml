@@ -1,0 +1,35 @@
+title: PPP
+description: "The latest and greatest from the geniuses at Alfred Security, the Polynomial Padding Protocol.
+Peak of classical cryptography, no more flags in jeopardy."
+
+authors:
+  - Leonard Jarlskog
+categories:
+  - crypto
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: "oh_my_polynomial_dreams_:sob:_i_dream_of_future_revenge_chall_:smiling_imp:"
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 46792
+  privileged: true
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 46792
+downloadable_files:
+  - container/chall.py
+
+challenge_id: 99b0e74e-3d2d-481e-89bd-91b509e5dff0
+spec: 0.0.1
+
+score: 500
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

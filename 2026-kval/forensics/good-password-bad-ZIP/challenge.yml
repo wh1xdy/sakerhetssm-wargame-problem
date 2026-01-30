@@ -1,0 +1,23 @@
+title: My zip is cracked
+description: Oh no! I've locked my flag in my zip with a bruteforce-safe password. Whatever am I suppsed to do???
+authors:
+  - EvenJ0b
+categories:
+  - forensics
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: g00d_p455w0rd_b4d_f0rm4t5
+
+downloadable_files:
+  - out.zip
+
+challenge_id: a6f5d3cd-7410-4bd7-bf13-117cf2331f88
+spec: 0.0.1
+
+score: 200
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

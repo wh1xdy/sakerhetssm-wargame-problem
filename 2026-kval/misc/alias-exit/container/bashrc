@@ -1,0 +1,9 @@
+export PS1='\[\033[1;32m\][\[\e]0;\u@\h: \w\a\]\u@ctf:\w]\$\[\033[0m\] '
+
+echo Good luck! I have aliased all commands to \"exit\".
+
+for cmd in $(compgen -c)
+do
+    cmd=${cmd##*/}
+    alias $cmd='exit #'
+done

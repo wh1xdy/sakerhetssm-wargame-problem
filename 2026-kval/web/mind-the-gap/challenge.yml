@@ -1,0 +1,28 @@
+title: Mind the Gap
+description: CTFront is a new FAQ platform built by CTF players, for CTF players. Come check out what's been published!
+authors:
+  - Alexander Wedlund
+categories:
+  - web
+  - medium
+
+flag_format_prefix: SSM{
+flags: r34r_l1n3_und3f3nd3d
+
+service:
+  type: website
+  image: container
+  internal_port: 1337
+  external_port: 46913
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:46913
+challenge_id: 66556949-d147-41b7-808e-3c92dc487cd9
+spec: 0.0.1
+
+score: 300
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval

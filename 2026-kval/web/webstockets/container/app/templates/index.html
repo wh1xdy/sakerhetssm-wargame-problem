@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebStockets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Sock Business Live Exchange</h1>
+        <small></small>
+        
+    </header>
+    <main>
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
+            <small>Numbers refresh every two seconds straight from the Fort Payne matching engine.</small>
+        <section>
+            <h2>WebSocket Live Feed</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr><th>Exchange</th><th>Price</th><th>Delta</th><th>Data</th></tr>
+                    </thead>
+                    <tbody id="local-body"></tbody>
+                </table>
+            </div>
+        </section>
+        <div class="select">
+            <h3>Monitor specific feed:</h3>
+            <p id="feed-status">No feed selected.</p>
+            <div class="feed-buttons">
+                <button type="button" class="feed-btn" data-feed="/feeds/lsoc.json">
+                    London Sock Exchange
+                </button>
+                <button type="button" class="feed-btn" data-feed="/feeds/shfe.json">
+                    Shanghai Footsole Exchange
+                </button>
+                <button type="button" class="feed-btn" data-feed="/feeds/soxxe.json">
+                    Socks Options Exchange
+                </button>
+                <button type="button" class="feed-btn" data-feed="/feeds/xnas.json">
+                    National Association of Sock Dealers Automated Quotations
+                </button>
+            </div>
+        </div>
+    </main>
+    <script>
+
+    </script>
+</body>
+</html>

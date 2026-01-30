@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  smtp:
+    build: ./smtp_server
+    container_name: smtp
+    ports:
+      - "1025:1025"
+    networks:
+      - ctf_net
+      
+  bot1:
+    build: ./bot1
+    container_name: bot1
+    depends_on:
+      - smtp
+    networks:
+      - ctf_net
+    ports:
+      - "5001:5000"
+      
+  bot2:
+    build: ./bot2
+    container_name: bot2
+    depends_on:
+      - smtp
+    networks:
+      - ctf_net
+    ports:
+      - "5002:5000"
+      
+networks:
+  ctf_net:
+    driver: bridge

@@ -1,0 +1,23 @@
+title: Stacked
+description: Are you the stack king? Can you stack them properly?
+authors:
+  - ZetaTwo
+categories:
+  - reversing
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: stack_em_h1gh
+
+downloadable_files:
+  - challenge
+
+challenge_id: 4af4e3d5-8039-4fb1-bff0-f63759effc5b
+spec: 0.0.1
+
+score: 400
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Kval
