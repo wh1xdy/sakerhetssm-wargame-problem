@@ -1,0 +1,35 @@
+title: flaGZip
+description: "Welcome to flaGZip, the hybrid compression and encryption service! NOTE: the flag format is SSM{[a-zA-Z0-9]*}."
+authors:
+  - David Bergström
+categories:
+  - crypto
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: "psDI6Fz9iw9x"
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40159
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 40159
+
+downloadable_files:
+  - container/service
+
+challenge_id: da1003bc-28f9-44b9-aab5-6f19c18c24e6
+spec: 0.0.1
+
+score: 300
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

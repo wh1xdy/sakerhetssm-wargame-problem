@@ -1,0 +1,77 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Authered</title>
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet">
+    <script src="/lib/popper.js/umd/popper.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/js/girlypop.js" defer></script>
+</head>
+<body class="girlypop-body">
+
+
+<div class="bg-bubble bg-bubble-a"></div>
+<div class="bg-bubble bg-bubble-b"></div>
+<div class="bg-bubble bg-bubble-c"></div>
+
+<nav class="navbar navbar-nav navbar-expand-lg gp-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand gp-brand" href="/">Data Authered</a>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto"></ul>
+        </div>
+
+        @if (User.Identity?.Name is not null)
+        {
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                       data-bs-toggle="dropdown">
+                        @User.Identity.Name
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>
+                                <a class="dropdown-item" href="#">Admin</a>
+                            </li>
+                        }
+
+                        <li>
+                            <a class="dropdown-item" asp-controller="Account" asp-action="SignOut">
+                                Sign Out
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        }
+        else
+        {
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Account" asp-action="Index">
+                        Account
+                    </a>
+                </li>
+            </ul>
+        }
+    </div>
+</nav>
+
+<div class="container">
+    <div class="mt-4">
+        @RenderBody()
+    </div>
+</div>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

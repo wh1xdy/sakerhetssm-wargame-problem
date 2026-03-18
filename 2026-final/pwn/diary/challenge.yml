@@ -1,0 +1,38 @@
+title: my lovely diary
+description: my precious, use with care
+authors:
+  - LiamoOo
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: ggz_now_my_darkest_secrets_are_out_#ilove67
+
+downloadable_files:
+  - container/chall
+  - chall.c
+  - libc.so.6
+  - ld-linux-x86-64.so.2
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40233
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 40233
+
+challenge_id: 9641ba55-0bd0-4d7f-a9dc-31f3b2761ba5
+spec: 0.0.1
+score: 350
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final
+

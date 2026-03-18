@@ -1,0 +1,24 @@
+title: Wrong Repo!
+description: "Oh no! I accidentally pushed my chall to my fork of the archive, instead of the chall-creation repo! I hope that I was able to remove it before anyone saw."
+authors:
+  - AndreasLonn
+categories:
+  - misc
+
+# THIS IS NOT THE CHALL FILE YOU ARE LOOKING FOR
+
+flag_format_prefix: SSM{
+flags: X_🍴_￼_※
+
+downloadable_files:
+  - screenshot.png
+
+challenge_id: 01463043-70d2-4586-a733-f59ad676ea47
+spec: 0.0.1
+
+score: 150
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

@@ -1,0 +1,38 @@
+title: The Oslo Poetry Research Organization
+description:
+  The norwegians are really stuck up with their poetry expertise, can you write something they can't critique?
+
+  They have been known not to be able to picture a CSP.
+
+  https://flourishing-narwhal-ba7f26.netlify.app/
+authors:
+  - Movitz Sunar
+categories:
+  - web
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: d0nt_tru5st_th3_t7p3s
+
+service:
+  type: website
+  image: adminbot
+  internal_port: 3000
+  external_port: 40242
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:40242
+
+downloadable_files:
+  - oslo.zip
+
+challenge_id: c9daba6f-0cae-4773-baaf-14ea94eb991f
+spec: 0.0.1
+
+score: 400
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

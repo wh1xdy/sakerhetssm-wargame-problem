@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fence Authority - Delivery Portal</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="logo-area">
+                    <div class="crown">&#127800;</div>
+                    <div>
+                        <h1>The Fence Authority &#10024;</h1>
+                        <p class="subtitle">Delivery Portal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="/" class="active">&#127793; Home</a></li>
+                    <li><a href="#track">&#128230; Track Delivery</a></li>
+                    <li><a href="#contact">&#128140; Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>&#128230; Delivery Portal &#10024;</h2>
+                <p>Track the status of your fence delivery. Enter the URL from your delivery confirmation email below &#128151;</p>
+            </div>
+        </section>
+
+        <section id="track" class="content-section">
+            <div class="container">
+                <h2>&#128230; Track Your Delivery</h2>
+                <p>Enter the URL from your delivery confirmation email to check the current status of your fence delivery &#128536;</p>
+
+                <form action="/track" method="POST" class="order-form">
+                    <div class="form-group">
+                        <label for="url">&#128279; Delivery URL</label>
+                        <input type="text" id="url" name="url" required placeholder="https://...">
+                    </div>
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <label for="start">&#128203; Byte start</label>
+                            <input type="number" id="start" name="start" value="0" min="0">
+                        </div>
+                        <div>
+                            <label for="end">&#128203; Byte end</label>
+                            <input type="number" id="end" name="end" value="50" min="0">
+                        </div>
+                    </div>
+                    <p style="font-size: 12px; color: #8b6c9c; margin-bottom: 16px;">Max 50 bytes per request.</p>
+                    <button type="submit">Track Delivery &#10024;</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section alt-bg">
+            <div class="container">
+                <h2>&#128140; Contact</h2>
+                <p>For questions about your delivery, contact us at <strong>010-FENCE 0</strong> or <strong>registry@fenceauthority.gov</strong>.</p>
+                <p style="margin-top: 8px;">Office hours: Monday&ndash;Friday 08:00&ndash;16:30</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#128151; 2026 The Fence Authority | Reg.no 202100-4287</p>
+        </div>
+    </footer>
+</body>
+</html>

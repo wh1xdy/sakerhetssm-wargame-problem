@@ -1,0 +1,28 @@
+@model DataAuthered.Models.AccountModel
+
+@{
+    Layout = "_RootLayout";
+}
+
+<div class="gp-card gp-hero">
+    <p class="gp-chip mb-2">Sign In</p>
+    <h1 class="gp-title">Welcome to the glitter login lounge</h1>
+    <p class="gp-subtitle">Drop your name and enter the girly pop data zone.</p>
+
+    @using (Html.BeginForm("SignIn", "Account"))
+    {
+        <div class="mb-3">
+            @Html.LabelFor(m => m.Username, new { @class = "form-label" })
+            @Html.TextBoxFor(
+                m => m.Username,
+                new
+                {
+                    @class = "form-control gp-input" + (ViewData.ModelState["Username"]?.Errors.Count > 0 ? " is-invalid" : "")
+                }
+            )
+            @Html.ValidationMessageFor(m => m.Username, "", new { @class = "invalid-feedback" })
+        </div>
+
+        <button type="submit" class="gp-btn">Login</button>
+    }
+</div>

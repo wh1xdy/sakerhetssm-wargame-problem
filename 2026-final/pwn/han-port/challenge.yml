@@ -1,0 +1,36 @@
+title: Svenska Trasselnät
+description: |
+  Welcome to the HAN-port monitor system.
+  The system provides realtime measurements from energy meters throughout the nordics.
+authors:
+  - ripSquid
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: r3act0r_l33k
+
+downloadable_files:
+  - ./handout.zip
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40234
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 40234
+
+challenge_id: 70354891-5791-4a0d-8093-7473a86bfad6
+spec: 0.0.1
+score: 250
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

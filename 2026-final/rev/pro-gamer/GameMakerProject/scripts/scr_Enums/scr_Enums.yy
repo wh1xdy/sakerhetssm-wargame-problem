@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Enums",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Enums",
+  "parent":{
+    "name":"CTFChallenge1",
+    "path":"CTFChallenge1.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

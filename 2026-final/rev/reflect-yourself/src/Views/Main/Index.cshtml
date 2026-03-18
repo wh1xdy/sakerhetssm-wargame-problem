@@ -1,0 +1,27 @@
+@model ReflectYourself.Views.Main.IndexModel
+
+@{
+    Layout = "_RootLayout";
+}
+
+<h2 class="mb-4">Evaluate C# code</h2>
+@using (Html.BeginForm("SubmitCode", "Main"))
+{
+    <div class="mb-3">
+        @Html.LabelFor(m => m.Code, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.Code, new { @class = "form-control", placeholder = "1 + 1" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
+
+@if (Model.Error is not null)
+{
+    <h4 class="mt-4 mb-2">Error:</h4>
+    <p>@Model.Error</p>
+}
+else if (Model.Result is not null)
+{
+    <h4 class="mt-4 mb-2">Result:</h4>
+    <p>@Model.Result</p>
+}

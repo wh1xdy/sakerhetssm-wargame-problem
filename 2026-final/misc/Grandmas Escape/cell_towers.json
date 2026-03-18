@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Tower7",
+        "latitude": 67.83672336951327,
+        "longitude": 20.16698523741757
+    },
+    {
+        "name": "Tower2",
+        "latitude": 68.0820605033971,
+        "longitude": 21.20573743058447
+    },
+    {
+        "name": "Tower3",
+        "latitude": 65.58703685199144,
+        "longitude": 22.17152835033271
+    },
+    {
+        "name": "Tower1",
+        "latitude": 67.94870007661201,
+        "longitude": 23.73817175547684
+    },
+    {
+        "name": "Tower4",
+        "latitude": 66.95933138192369,
+        "longitude": 19.82611983586732
+    },
+    {
+        "name": "Tower5",
+        "latitude": 67.20233958947068,
+        "longitude": 23.35487472410421
+    },
+    {
+        "name": "Tower6",
+        "latitude": 67.57199176984777,
+        "longitude": 15.408910443493
+    },
+    {
+        "name": "Tower8",
+        "latitude": 67.32837073048134,
+        "longitude": 23.92019207057006
+    },
+    {
+        "name": "Tower9",
+        "latitude": 68.3459557155293,
+        "longitude": 22.97595390573743
+    },
+    {
+        "name": "Tower10",
+        "latitude": 66.6009812835326,
+        "longitude": 19.89676071422987
+    }
+]

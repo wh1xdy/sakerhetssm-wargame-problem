@@ -1,0 +1,24 @@
+title: Grandmas Escape
+description: Upon arriving at the retirement home, Grandma was no longer there. Two agents from Skatteverket (the Swedish Tax Agency) met us at the door and explained to us that Grandma is wanted for tax fraud. After a Palt™ dinner with the agents, we were invited to help them with the case. We got access to the following logs obtained from Grandma's telecom provider. They also mentioned something about -30 - 20 * log10(d) (meters). Could you help us figure out where grandma is. **SSM{Cityname_LAT_LONG} (coordinates truncated to two decimals is enough) use . and not , in the flag**.
+authors:
+  - Palt0verflow
+categories:
+  - misc
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: Svappavaara_67.64_21.05
+
+downloadable_files:
+  - cell_towers.json
+  - signals.csv
+
+challenge_id: 109dd12f-bcc3-482b-ae47-6d2cf71cad77
+spec: 0.0.1
+
+score: 250
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

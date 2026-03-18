@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+from Crypto.Cipher import Salsa20
+from Crypto.Random.random import getrandbits
+from gzip import compress
+from flag import flag
+
+key = getrandbits(128).to_bytes(16, 'little')
+
+def ncrpt_nd_cmprs(msg):
+	data = msg.encode('utf-8')
+	pepper = flag.encode('utf-8')
+	nonce = getrandbits(256).to_bytes(32, 'little')
+	plain = compress(data + pepper + nonce)
+	cipher = Salsa20.new(key).encrypt(plain)
+	return cipher
+
+if __name__ == '__main__':
+	print('Welcome to flaGZip, the hybrid compression and encryption service!')
+	print('Known bugs:')
+	print(' - the compression can actually make small messages larger because of block')
+	print('   headers and such.')
+	print(' - some security folks complained that there is no padding applied to messages.')
+	print(' - there is currently no flaGUnzip service to decrypt and decompress messages.')
+	while True:
+		msg = input('Enter a message you would like to compress and encrypt: ')
+		cipher = ncrpt_nd_cmprs(msg).hex()
+		print(f'Here is your ciphertext: {cipher}')
+

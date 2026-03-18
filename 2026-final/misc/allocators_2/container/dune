@@ -1,0 +1,8 @@
+(executable
+ (name main)
+ (modules ast dag parser lexer regalloc main))
+
+(ocamllex lexer)
+
+(menhir
+ (modules parser))

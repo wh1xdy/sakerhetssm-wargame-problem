@@ -1,0 +1,35 @@
+title: The Fence Authority ✨
+description: >
+  The Fence Authority has launched their new intranet somewhere on localhost, we need to get the flag from the other side of the fence. Luckily we have installed a back door within their network! Due to legal constraints we can only extract 50 bytes at at time.... (Hint: `params = request.form if request.method == "POST" else request.args`)
+authors:
+  - Movitz Sunar
+categories:
+  - web
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: girly_p0p_over_the_fence
+
+service:
+  type: website
+  image: container
+  internal_port: 1337
+  external_port: 40243
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:40243
+
+downloadable_files:
+  - container/server.py
+  - container/public.py
+
+challenge_id: f7b34eda-0b0e-4e3c-ab27-aa5f01ce82aa
+spec: 0.0.1
+
+score: 250
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

@@ -1,0 +1,17 @@
+[package]
+name = "fragmented"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+opt-level = "z"       #  3 / z / s
+lto = true         
+codegen-units = 1   # Force single-threaded compilation (required for best LTO)
+panic = "abort"     # Remove all stack unwinding/panic text logic
+strip = true        # Remove symbols (don't give them function names)
+
+[dependencies]
+hex-literal = "1.1.0"
+rayon = "1.11.0"
+thiserror = "2.0.18"
+wasmtime = { version = "41.0.3", default-features = false, features = ["runtime", "std"] }

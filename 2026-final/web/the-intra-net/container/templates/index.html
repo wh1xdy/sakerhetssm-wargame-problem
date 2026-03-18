@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fence Authority - Intranet</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="logo-area">
+                    <div class="crown">&#127800;</div>
+                    <div>
+                        <h1>The Fence Authority &#10024;</h1>
+                        <p class="subtitle">The Authority for Fences and Enclosures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="/" class="active">&#127793; Home</a></li>
+                    <li><a href="#about">&#128149; About Us</a></li>
+                    <li><a href="#services">&#127774; Services</a></li>
+                    <li><a href="#order">&#128230; Order Fence</a></li>
+                    <li><a href="#contact">&#128140; Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>&#10024; Welcome to The Fence Authority Intranet &#10024;</h2>
+                <p>The coziest government agency for providing fences, pickets, and enclosures to the nation's citizens since 1847 &#128151;</p>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>&#128149; About The Fence Authority</h2>
+                <div class="two-col">
+                    <div>
+                        <p>The Fence Authority was founded in 1847 by royal decree and has since worked tirelessly to ensure that every citizen has access to fences of the highest quality.</p>
+                        <p>Our operations are governed by the Fence Act (SFS 1847:42) and the Regulation on Enclosures and Boundaries (SFS 1923:17). We operate under the Ministry of Enterprise.</p>
+                        <p>The agency's mandate includes:</p>
+                        <ul>
+                            <li>Providing fences to individuals and businesses</li>
+                            <li>Conducting quality control of fence manufacturing</li>
+                            <li>Managing the national fence registry</li>
+                            <li>Conducting research in modern fence technology</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h3>&#128171; The Fence Authority in Numbers</h3>
+                        <dl>
+                            <dt>Founded</dt>
+                            <dd>1847</dd>
+                            <dt>Employees</dt>
+                            <dd>342</dd>
+                            <dt>Fences delivered (2025)</dt>
+                            <dd>14,892</dd>
+                            <dt>Customer satisfaction</dt>
+                            <dd>97.3%</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="content-section alt-bg">
+            <div class="container">
+                <h2>&#127774; Our Services</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>&#127795; Wooden Fences</h3>
+                        <p>Classic wooden fences in pine and spruce. Available in heights of 80 cm, 120 cm, and 180 cm. All wooden fences are FSC-certified.</p>
+                    </div>
+                    <div class="card">
+                        <h3>&#128296; Metal Fences</h3>
+                        <p>Robust metal fences in galvanized steel. Suitable for industry, agriculture, and public spaces. 25-year rust warranty.</p>
+                    </div>
+                    <div class="card">
+                        <h3>&#127806; Rustic Fences</h3>
+                        <p>Traditional rustic fences crafted according to artisan traditions. Perfect for rural settings and heritage properties.</p>
+                    </div>
+                    <div class="card">
+                        <h3>&#127801; Hedge Solutions</h3>
+                        <p>Living fences in the form of hedge plantings. We offer privet, boxwood, and hornbeam with planting service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="content-section">
+            <div class="container">
+                <h2>&#128230; Order Fence</h2>
+                <p>Fill in the form below to submit a fence order. All fields are required. Please verify that you are not a robot by solving the CAPTCHA challenge &#128536;</p>
+
+                <form action="/request" method="POST" class="order-form">
+                    <div class="form-group">
+                        <label for="name">&#128100; Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="First Last">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">&#127968; Delivery Address</label>
+                        <input type="text" id="address" name="address" placeholder="Street, postal code, city">
+                    </div>
+                    <div class="form-group">
+                        <label for="fence-type">&#10024; Fence Type</label>
+                        <select id="fence-type" name="fence_type">
+                            <option value="wood">&#127795; Wooden Fence</option>
+                            <option value="metal">&#128296; Metal Fence</option>
+                            <option value="rustic">&#127806; Rustic Fence</option>
+                            <option value="hedge">&#127801; Hedge Solution</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="length">&#128207; Desired Length (meters)</label>
+                        <input type="number" id="length" name="length" min="1" max="1000" value="10">
+                    </div>
+
+                    <div class="captcha-section">
+                        <label>&#128272; Security Verification</label>
+                        <p class="captcha-help">Enter the text shown in the image below.</p>
+                        <div class="captcha-box">
+                            <img src="/captcha/{{ captcha_token }}" alt="CAPTCHA">
+                        </div>
+                        <div class="token-badge">
+                            <img src="/token/{{ captcha_token }}" alt="Verification token">
+                            <span>Security token</span>
+                        </div>
+                        <input type="hidden" name="captcha_token" value="{{ captcha_token }}">
+                        <input type="text" id="captcha" name="captcha" required placeholder="Enter the code above" autocomplete="off">
+                    </div>
+
+                    <button type="submit">Submit Order &#10024;</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section alt-bg">
+            <div class="container">
+                <h2>&#128140; Contact Information</h2>
+                <div class="two-col">
+                    <div>
+                        <h3>&#127968; Visiting Address</h3>
+                        <p>1 Fence Road<br>
+                        12345 Fenceville<br>
+                        Sweden</p>
+                        <h3>&#128222; Phone</h3>
+                        <p>010-FENCE 0 (010-33623 0)</p>
+                        <h3>&#128231; Email</h3>
+                        <p>registry@fenceauthority.gov</p>
+                    </div>
+                    <div>
+                        <h3>&#128336; Office Hours</h3>
+                        <p>Monday&ndash;Friday: 08:00&ndash;16:30<br>
+                        Closed for lunch: 12:00&ndash;13:00</p>
+                        <h3>&#128081; Director General</h3>
+                        <p>Birgitta Fenceberg</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#128151; 2026 The Fence Authority | Reg.no 202100-4287 | <a href="#">Accessibility Statement</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+</body>
+</html>

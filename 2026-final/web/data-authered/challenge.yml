@@ -1,0 +1,32 @@
+title: Data Authered
+description: This is so secure you can never get the flag, I even give you path traversal!
+authors:
+  - Instellate
+categories:
+  - web
+
+flag_format_prefix: SSM{
+flags: you_authered_the_data!!
+
+service:
+  type: website
+  image: src
+  internal_port: 8080
+  external_port: 40241
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:40241
+
+downloadable_files:
+  - dist.zip
+
+challenge_id: cffb2a9c-8b46-4c07-ac0f-f9e78053454a
+spec: 0.0.1
+
+score: 400
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

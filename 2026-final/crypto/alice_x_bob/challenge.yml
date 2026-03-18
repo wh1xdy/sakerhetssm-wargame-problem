@@ -1,0 +1,23 @@
+title: AO3 exchange
+description: I found this romantic fanfiction about my favorite fictional characters Alice and Bob. I cant wait for the next part!!
+authors:
+  - Elmer Brännström
+categories:
+  - crypto
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: 4_t0k3n_0f_0ur_l0v3_<3
+
+downloadable_files:
+  - chall.py
+  - story.txt
+
+challenge_id: 32e3c86b-6edf-49aa-848e-32eccf8352ed
+spec: 0.0.1
+score: 300
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

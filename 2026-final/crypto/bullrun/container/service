@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+
+import Crypto.PublicKey.ECC as ECC
+from Crypto.Random.random import getrandbits
+from Crypto.Util.number import bytes_to_long
+from snowden_papers import state_secrets
+
+params = ECC.generate (curve='Curve25519')
+Q = params.pointQ
+P = Q * getrandbits (16)
+s = getrandbits (112)
+
+def f():
+	global s
+	r = (P * s).x
+	s = (P * r).x
+	return int((Q * r).x >> 16)
+
+print ('Welcome to the Bullrun(TM) encryption machine!')
+print (f'Serial number: {P.x}')
+print (f'Model number: {Q.x}')
+
+while True:
+	print ('What would you like to do?')
+	print ('1) Encrypt your own secrets.')
+	print ('2) Read state secrets.')
+	print ('3) Exit.')
+
+	action = input ('> ')
+	if action == '1':
+		try:
+			num = int (input ('Enter your secret: '))
+		except ValueError:
+			print ('We knew that already.')
+			continue
+		print (f'Here is your encrypted secret: {num ^ f()}')
+	elif action == '2':
+		print (f'Here are some state secrets: {bytes_to_long (state_secrets) ^ f()}')
+	elif action == '3':
+		print ('Goodbye.')
+		break
+	else:
+		print ('Invalid action.')
+

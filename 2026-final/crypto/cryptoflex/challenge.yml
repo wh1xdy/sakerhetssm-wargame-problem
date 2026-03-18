@@ -1,0 +1,35 @@
+title: CryptoFlex 3000
+description: Try out our new amazing encryption tool which allows for excellent parameter flexibility
+authors:
+  - ZetaTwo
+categories:
+  - crypto
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: s0_fleX1bl3_1t_b3nds_ar0und_4nd_br3aks
+
+downloadable_files:
+  - src/server.py
+
+service:
+  type: tcp
+  image: .
+  internal_port: 1337
+  privileged: true
+  external_port: 40158
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 40158
+
+challenge_id: bdb17bb7-c144-4439-a290-e95b8ae58a32
+spec: 0.0.1
+
+score: 500
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

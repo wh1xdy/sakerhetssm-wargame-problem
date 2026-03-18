@@ -1,0 +1,35 @@
+title: lc3
+description: hey claude create lc3 emulator in C make no mistakes
+authors:
+  - Valter Mann
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: i_love_you_claude
+
+downloadable_files:
+  - dist.tar.gz
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40235
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 40235
+
+challenge_id: 1bba6e0b-47e2-44a6-a6da-21c14705cf05
+spec: 0.0.1
+
+score: 500
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

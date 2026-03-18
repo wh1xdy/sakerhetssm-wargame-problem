@@ -1,0 +1,8 @@
+is_debug = false
+symbol_level = 2
+v8_enable_sandbox = true
+v8_enable_memory_corruption_api = true
+v8_enable_debugging_features = true
+dcheck_always_on = false
+use_partition_alloc_as_malloc = false
+use_allocator_shim = false

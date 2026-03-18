@@ -1,0 +1,23 @@
+title: Palt Heist pt.2
+description: After the Palt™ recipe got leaked, we received this threatening letter. We need you to help us figure out when it was printed. The timestamp should be in the following format, SSM{YY-MM-DD-HH:MM}.
+authors:
+  - Palt0verflow
+categories:
+  - forensics
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: 25-08-20-15:45
+
+downloadable_files:
+  - chall.png
+
+challenge_id: de449e02-ec34-4700-8847-e87406d89964
+spec: 0.0.1
+
+score: 150
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

@@ -1,0 +1,23 @@
+title: Fragmented
+description: I dropped my flag checker and it broke into several pieces. I glued them together with some iron oxide to make it whole again. Please try it out to see that it is still working.
+authors:
+  - ZetaTwo
+categories:
+  - reversing
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: eXcit1inG_0x1de_and_WASMT1M3
+
+downloadable_files:
+  - build/fragmented
+
+challenge_id: 3dfde581-261f-4513-a9c1-9a726baeae7d
+spec: 0.0.1
+
+score: 500
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

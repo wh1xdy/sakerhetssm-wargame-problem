@@ -1,0 +1,29 @@
+title: Reflect Yourself
+description: Sometimes self reflection might be needed. I did some self reflection here
+authors:
+  - Instellate
+categories:
+  - reversing
+
+flag_format_prefix: SSM{
+flags: i_really_reflected_on_myslef_huh?
+
+service:
+  type: website
+  image: src
+  internal_port: 8080
+  external_port: 40239
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:40239
+
+challenge_id: 1c592c19-7273-4975-ad54-10d8e22cea15
+spec: 0.0.1
+
+score: 400
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

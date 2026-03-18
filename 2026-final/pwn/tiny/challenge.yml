@@ -1,0 +1,36 @@
+title: Tiny
+description: "That's a small executable."
+authors:
+  - Hannes Bredberg
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: tiny_challenge_big_reward
+
+downloadable_files:
+  - tiny
+
+service:
+  type: tcp
+  image: .
+  internal_port: 1337
+  privileged: true
+  external_port: 40237
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 40237
+
+
+challenge_id: abe6ab96-a014-43b7-96f6-4bb7e9d2f143
+spec: 0.0.1
+
+score: 350
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

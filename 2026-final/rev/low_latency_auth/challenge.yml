@@ -1,0 +1,35 @@
+title: Low Latency Auth
+description: We need authentication to be super lightweight on our edge devices so I implemented this XOR filter. Bloom filters are too expensive for us.
+authors:
+  - chopingu
+categories:
+  - reversing
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SSM{
+flags: w4gn3r_ru1n3d_my_l0w_l4t3ncy_4uth_s0b
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40238
+
+predefined_services:
+- type: tcp
+  host: ssmarkiv.ctfchall.se
+  port: 40238
+
+downloadable_files:
+  - container/handout_service
+
+challenge_id: 91135500-4367-4bdd-a00f-d9220e819ebd
+spec: 0.0.1
+
+score: 500
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

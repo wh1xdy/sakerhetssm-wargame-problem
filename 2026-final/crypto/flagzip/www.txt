@@ -1,0 +1,7 @@
+[x] Starting local process './container/service'
+[+] Starting local process './container/service': pid 228215
+base = 124
+125 SSM{This00
+125 SSM{This03
+125 SSM{This05
+[*] Stopped process './container/service' (pid 228215)

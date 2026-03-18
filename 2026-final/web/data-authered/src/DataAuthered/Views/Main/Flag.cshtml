@@ -1,0 +1,12 @@
+@model DataAuthered.Models.FlagModel
+
+@{
+    Layout = "_RootLayout";
+}
+
+<div class="gp-card gp-hero">
+    <p class="gp-chip mb-2">Admin Only</p>
+    <h1 class="gp-title">You found the flag, diva mode unlocked</h1>
+    <p class="gp-subtitle">Security with shimmer.</p>
+    <p class="gp-flag mt-3 mb-0">@Model.Flag</p>
+</div>

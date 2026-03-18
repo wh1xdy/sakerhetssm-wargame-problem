@@ -1,0 +1,22 @@
+title: Complex RSA
+description: By making this tried and tested encryption algorithm complex, i have eliminated all vulnerabilities!
+authors: # ha namnen på problemskapare här, går bra att skriva flera personer om man sammarbetar på uppgiften
+  - Elmer Brännström
+categories: # går också bra att ha en uppgift med flera kategorier, till exempel för en webserver skriven i C där man får en binär kan både "web" och "reversing" vara relevant. Skriv då den mer relevanta kategorien först.
+  - crypto
+
+flag_format_prefix: SSM{ # Detta ska alltid vara "SSM{" om flaggan innehåller flagformatet. om den inte gör det, ändra detta till "null"
+flags: 4ppr0x1mat1ng_c4n_b3_us3ful_3v3n_0v3r_1nt3g3rs # Detta är insidan av flaggan, alltså här beskrivs denna flagga: SSM{this_is_the_flag}
+
+challenge_id: be5f5066-d23a-47ef-bf84-58ef75adf616 # Generera godtycklig slumpsträng som uppgiftsid och sätt den här. challtools kan göra detta åt dig genom "challtools init" eller "challtools ensureid"
+spec: 0.0.1 # Detta ska vara exakt som det är, rör inte
+
+downloadable_files:
+  - chall.py
+  - output.txt
+score: 450
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

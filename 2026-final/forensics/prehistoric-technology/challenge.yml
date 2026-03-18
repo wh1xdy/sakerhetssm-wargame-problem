@@ -1,0 +1,21 @@
+title: Prehistoric technology
+description: While cataloging the equipment in our data center, I stumbled across a prehistoric-looking server tucked away in a corner. My first instinct was to pull the plug, but after taking a closer look, it appears someone might still be using it...<br>Flag format <code>SSM{[a-z]}</code>. Wrap the solution inside <code>SSM{}</code>
+authors:
+  - Laith Abbawi
+categories:
+  - forensics
+
+flag_format_prefix: SSM{
+flags: sstanredvelvet
+
+downloadable_files:
+  - capture.pcap
+
+challenge_id: ce5d92bd-577e-41ee-a0ab-914ba28c85f5
+spec: 0.0.1
+score: 450
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final

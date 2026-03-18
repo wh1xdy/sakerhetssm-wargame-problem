@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fence Authority - Delivery Tracking</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="logo-area">
+                    <div class="crown">&#127800;</div>
+                    <div>
+                        <h1>The Fence Authority &#10024;</h1>
+                        <p class="subtitle">The Authority for Fences and Enclosures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="/">&#127793; Home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                {% if error %}
+                <div class="result-box error">
+                    <h2>&#128557; Something went wrong</h2>
+                    <p>{{ error }}</p>
+                </div>
+                {% else %}
+                <div class="result-box success">
+                    <h2>&#128230; Delivery Status</h2>
+                    <p>Response from <strong>{{ url }}</strong> (bytes {{ start }}&ndash;{{ end }} of {{ total }}):</p>
+                    <pre style="white-space: pre-wrap; word-break: break-all; background: rgba(0,0,0,0.04); padding: 16px; border-radius: 12px; margin-top: 12px; font-size: 13px;">{{ encoded }}</pre>
+                </div>
+                {% endif %}
+                <a href="/" class="back-link">&#10024; Back to home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&#128151; 2026 The Fence Authority | Reg.no 202100-4287</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@{
+    Layout = "_RootLayout";
+}
+
+@if (User.Identity?.Name is not null)
+{
+    <div class="gp-card gp-hero" data-girlypop-root>
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+            <div>
+                <p class="gp-chip mb-2">Girly Pop Control Panel</p>
+                <h1 class="gp-title">Hey @User.Identity.Name, your sparkle station is online</h1>
+                <p class="gp-subtitle">
+                    Your glam profile updates live in the browser from local system signals.
+                </p>
+            </div>
+        </div>
+
+        <div class="gp-kpi mt-3">
+            <div class="gp-kpi-item">
+                <div class="gp-kpi-label">Host name</div>
+                <div class="gp-kpi-value" data-gp-host>Loading...</div>
+            </div>
+            <div class="gp-kpi-item">
+                <div class="gp-kpi-label">OS glam</div>
+                <div class="gp-kpi-value" data-gp-distro>Loading...</div>
+            </div>
+            <div class="gp-kpi-item">
+                <div class="gp-kpi-label">/etc style count</div>
+                <div class="gp-kpi-value" data-gp-file-count>Loading...</div>
+            </div>
+            <div class="gp-kpi-item">
+                <div class="gp-kpi-label">Signature vibe</div>
+                <div class="gp-kpi-value" data-gp-vibe>Loading...</div>
+            </div>
+        </div>
+
+        <p class="gp-loader mt-3 mb-0" data-gp-status>Loading sparkle profile...</p>
+    </div>
+}
+else
+{
+    <div class="gp-card gp-hero">
+        <p class="gp-chip mb-2">Guest Mode</p>
+        <h1 class="gp-title">Girly Pop Dashboard</h1>
+        <p class="gp-subtitle mb-0">
+            You are not logged in. Sign in to load the filesystem-powered sparkle profile.
+        </p>
+    </div>
+}

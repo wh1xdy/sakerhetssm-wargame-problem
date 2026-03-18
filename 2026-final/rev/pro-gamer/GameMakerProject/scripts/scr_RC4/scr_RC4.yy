@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_RC4",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_RC4",
+  "parent":{
+    "name":"CTFChallenge1",
+    "path":"CTFChallenge1.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
