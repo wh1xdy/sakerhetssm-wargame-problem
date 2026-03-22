@@ -1,4 +1,0 @@
-replace container/d8 with the file downloaded from the link below
-https://drive.google.com/file/d/1bw4gmXpVXjJGfvr6Q2ZLkBy1BiBWr3RI/view?usp=sharing
-
-(the file is >100MB so github wont allow it since too big)
