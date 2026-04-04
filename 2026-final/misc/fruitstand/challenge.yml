@@ -1,0 +1,35 @@
+title: Fruit stand
+description: |
+  Welcome to buy stuff at the SSM fruit stand!
+
+  This was an onsite challenge created by Mateusz Drwal, and was later webinized by Andreas Lönn.
+authors:
+  - Mateusz Drwal
+  - Andreas Lönn
+categories:
+  - misc
+
+flag_format_prefix: SSM{
+flags:
+  - flag: POS_d035_n07_m34n_p01n7_0f_54l35
+  - flag: POS_d035_n07_m34n_p01n7_0f_54135
+
+service:
+  type: website
+  image: container
+  internal_port: 1337
+  external_port: 12345
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:12345
+
+challenge_id: 1776bd50-c1c4-4fef-a012-35c28bbcc222
+spec: 0.0.1
+
+score: 12345
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SSM 2026 Final
