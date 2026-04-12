@@ -4,6 +4,7 @@ description: |
 
   This was an onsite challenge created by Mateusz Drwal, and was later webinized by Andreas Lönn.
 authors:
+  - Mateusz Drwal
   - Andreas Lönn
 categories:
   - misc
@@ -21,7 +22,7 @@ service:
 
 predefined_services:
 - type: website
-  url: http://ssmarkiv.ctfchall.se:40936/
+  url: https://fruitstand.knackkoden.ctfchall.se/
 
 spec: 0.0.1
 

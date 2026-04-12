@@ -8,6 +8,7 @@ COPY flag.txt /
 RUN chown -R root:root /var/www/html/
 RUN chmod -R 555 /var/www/html/
 
-RUN adduser ctf
+RUN useradd --system --no-create-home --shell /usr/sbin/nologin ctf
+RUN chmod 755 /tmp /var/tmp
 
 USER ctf

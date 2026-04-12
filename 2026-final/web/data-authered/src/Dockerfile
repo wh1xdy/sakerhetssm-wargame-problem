@@ -24,6 +24,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 ENV FLAG="SSM{you_authered_the_data!!}"
+ENV DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false
 ENV Logging__LogLevel__Microsoft.AspNetCore.DataProtection.Repositories=None
 
 ENTRYPOINT ["dotnet", "DataAuthered.dll"]
