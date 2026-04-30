@@ -1,0 +1,27 @@
+title: Bark at the Moon
+description: |
+  Screams break the silence
+  Waking from the dead of night
+  Vengeance is boiling
+  He's returned to kill the light
+  (oh yeah, it's a crackme btw)
+
+authors:
+  - ZetaTwo
+categories:
+  - reversing
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SCSC{
+flags: Lua_is_v3ry_e4sy_t0_Emb3d
+
+downloadable_files:
+  - challenge
+score: 450
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: efca65f0-68f8-4c29-b543-2e69008d5c8c
+spec: 0.0.1

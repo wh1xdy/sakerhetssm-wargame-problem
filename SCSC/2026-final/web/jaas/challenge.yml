@@ -1,0 +1,32 @@
+title: JAAS
+description: Join as a service
+authors:
+  - KilledKenny
+categories:
+  - web
+
+flag_format_prefix: SCSC{
+flags: puT_s0m3_j0inTmEnt_0n_1t
+
+service:
+  type: website
+  image: container
+  internal_port: 3000
+  external_port: 40212
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:40212
+
+downloadable_files:
+  - chall.zip
+
+solution_image: ./solution
+score: 250
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 39f55a43-7cc4-4940-a784-af29e9c5d265
+spec: 0.0.1

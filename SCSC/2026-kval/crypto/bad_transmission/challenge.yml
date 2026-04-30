@@ -1,0 +1,21 @@
+title: Bad transmission
+description: "*radio noise* ...I'm sendi....essage....it's easy yo....ute the GCD a.... okay? *radio noise*"
+authors:
+  - Valter Wik
+categories:
+  - crypto
+
+flag_format_prefix: DDC{
+flags: 1_kn3w_y0u_w0uld_g3t_1t
+
+downloadable_files:
+  - chall.py
+  - output.txt
+score: 500
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Kval
+challenge_id: 63c1b4ef-bd45-4e07-819d-c37f020c2088
+spec: 0.0.1

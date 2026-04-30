@@ -1,0 +1,33 @@
+title: goodvm
+description: This is a good vm.
+authors:
+  - Maxim Pavlenko
+categories:
+  - pwn
+
+downloadable_files:
+  - dist.tar.gz
+
+service:
+  type: tcp
+  image: container
+  internal_port: 31338
+  privileged: false
+  external_port: 40218
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40218
+score: 400
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Kval
+flag_format_prefix: DDC{
+flags: binarysearchhhhhhhhhhh
+
+spec: 0.0.1
+
+challenge_id: 3dfeb0ca-99c2-4d62-8973-207316bb76bd

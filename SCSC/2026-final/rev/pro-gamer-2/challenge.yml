@@ -1,0 +1,24 @@
+title: Pro Gamer 2
+description: |
+  Are you tired of all these new modern games being so easy to beat?
+  Check out this old school release and show that you are a retro pro gamer.
+
+authors:
+  - ZetaTwo
+categories:
+  - reversing
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SCSC{
+flags: achi3v3ment_unl0ck3d
+
+downloadable_files:
+  - challenge.gb
+score: 450
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 084332c6-0f2a-4a6e-b2dd-350e89ba931b
+spec: 0.0.1

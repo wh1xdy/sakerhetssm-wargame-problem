@@ -1,0 +1,34 @@
+title: Autograph
+description: See readme.
+authors:
+  - Hjalmar Hoglund
+categories:
+  - crypto
+
+flag_format_prefix: SCSC{
+flags: oracle-this-and-that
+
+downloadable_files:
+  - container/net-autograph.go
+
+service:
+  type: tcp
+  image: container
+  internal_port: 40011
+  external_port: 40198
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40198
+
+solution_image: ./solution
+score: 450
+
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: b078b6e5-b9aa-44fc-8bd6-60decdf663b8
+spec: 0.0.1

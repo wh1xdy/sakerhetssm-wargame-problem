@@ -1,0 +1,32 @@
+title: Speedrun
+description: Can you solve 500 discrete logarithms in 5 minutes?
+authors:
+  - Leonard Jarlskog
+categories:
+  - crypto
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: DDC{
+flags: a_fresh_world_record_time,_just_for_you!
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40215
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40215
+score: 500
+downloadable_files:
+  - container/chall.py
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Kval
+challenge_id: 3b67a8a3-4122-4a8c-a805-1beb7f19e57a
+spec: 0.0.1

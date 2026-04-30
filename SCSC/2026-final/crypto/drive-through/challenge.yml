@@ -1,0 +1,33 @@
+title: Drive through
+description: "Welcome to the drive-through! Here we have an excellent selection of tasty snacks. Hope your math skills are sharp, we rely on polynomials for payments."
+authors:
+  - Hjalmar Hoglund
+categories:
+  - crypto
+
+flag_format_prefix: SCSC{
+flags: mmmm-so-tasty-and-nutritious
+
+downloadable_files:
+  - container/net-drive-through.go
+
+service:
+  type: tcp
+  image: container
+  internal_port: 40013
+  external_port: 40199
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40199
+
+solution_image: ./solution
+score: 400
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 9f6c82c7-1ed3-436a-86ad-4168612e8ae7
+spec: 0.0.1

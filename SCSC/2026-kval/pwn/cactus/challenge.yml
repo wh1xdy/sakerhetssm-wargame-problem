@@ -1,0 +1,33 @@
+title: Cactus
+description: I made a program to keep track of numbers...
+authors:
+  - Maxim Pavlenko
+categories:
+  - pwn
+
+downloadable_files:
+  - container/main
+
+service:
+  type: tcp
+  image: container
+  internal_port: 31337
+  privileged: false
+  external_port: 40217
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40217
+score: 450
+
+flag_format_prefix: DDC{
+flags: ooooooohhhhhhh_imm_taggingggggg_aaaahahhhhh
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Kval
+spec: 0.0.1
+
+challenge_id: 7d858b05-c61f-4040-8dc2-064c1020a3fb

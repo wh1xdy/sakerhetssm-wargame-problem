@@ -1,0 +1,42 @@
+#!/bin/bash
+
+BUILD_BRANCHES=("nyheter" "insanitizer")
+
+while read local_ref local_sha remote_ref remote_sha; do
+    branch=$(echo "$remote_ref" | sed 's|refs/heads/||')
+    
+    for target in "${BUILD_BRANCHES[@]}"; do
+        if [ "$branch" = "$target" ]; then
+            echo "Pushing to $branch - verifying chall.zip is up to date..."
+            
+            if [ -f "./build.sh" ]; then
+                BUILD_DIR="."
+            elif [ -f "./$branch/build.sh" ]; then
+                BUILD_DIR="./$branch"
+            elif [ -f "./web/$branch/build.sh" ]; then
+                BUILD_DIR="./web/$branch"
+            else
+                echo "ERROR: Couldn't find build.sh in cwd or $branch/"
+                exit 1
+            fi
+            
+            echo "Running $BUILD_DIR/build.sh..."
+            (cd "$BUILD_DIR" && ./build.sh)
+            
+            if [ $? -ne 0 ]; then
+                echo "Build failed! Push aborted."
+                exit 1
+            fi
+            
+            if ! git diff --quiet "$BUILD_DIR/dist/chall.zip" 2>/dev/null; then
+                echo "ERROR: $BUILD_DIR/dist/chall.zip is out of date!"
+                echo "Run (cd $BUILD_DIR && ./build.sh) and commit the changes before pushing."
+                exit 1
+            fi
+            
+            break
+        fi
+    done
+done
+
+exit 0

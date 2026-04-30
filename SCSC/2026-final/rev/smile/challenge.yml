@@ -1,0 +1,22 @@
+title: SMILe
+description: Is connecting a speaker to a computer performing sensitive calculations a good idea?
+
+authors:
+  - Aali
+categories:
+  - rev
+
+flag_format_prefix: SCSC{
+flags: CaXdmu4h52lZylIelFY8zpi3Cp
+
+downloadable_files:
+  - flag.mp3
+  - SCSC1
+score: 550
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: bd4288a0-c90b-4fab-8a2d-0f8955e6b827
+spec: 0.0.1

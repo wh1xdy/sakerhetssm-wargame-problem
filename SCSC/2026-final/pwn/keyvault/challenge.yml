@@ -1,0 +1,35 @@
+title: Keyvault
+description: Password managers are so 2025. I generate my own keys. To make sure your solution works, I suggest you start by solving it in the following order
+ 1. Local process, 
+ 2. Local container, 
+ 3. Remote.
+authors:
+  - ntomsic
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SCSC{
+flags: k33p_0n_r3r4nd0ming
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40209
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40209
+score: 500
+downloadable_files:
+  - keyvault.zip
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 54e46893-b7b4-47b3-9218-771d1574976a
+spec: 0.0.1

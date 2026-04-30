@@ -1,0 +1,21 @@
+title: Random init
+description: Try to recover the secret message
+authors:
+  - Hjalmar Hoglund
+categories:
+  - crypto
+
+flag_format_prefix: SCSC{
+flags: bit-shifting-more-than-you-can-chew
+
+downloadable_files:
+  - output.txt
+  - random-init.go
+score: 150
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: e83ffe70-bc0c-496f-a75e-041bd958e857
+spec: 0.0.1

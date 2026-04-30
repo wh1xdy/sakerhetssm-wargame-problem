@@ -1,0 +1,35 @@
+title: jmid2
+description: A very good image format.
+authors:
+  - ripsquid
+categories:
+  - pwn
+
+flag_format_prefix: SCSC{
+flags: b1gger_isnt_always_b3tter
+
+downloadable_files:
+  - a.out
+  - Dockerfile
+  - main.c
+  - ld-linux-x86-64.so.2
+  - libc.so.6
+
+service:
+  type: tcp
+  image: .
+  internal_port: 1337
+  external_port: 40208
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40208
+score: 400
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 1ed9a737-cf3f-419c-a683-d15b938e0454
+spec: 0.0.1

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYHETSBLADET - Sveriges nyhetskälla</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1><a href="/">NYHETSBLADET</a></h1>
+            <p>Sveriges NYHETSKÄLLA</p>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Sök nyheter..." />
+            <button id="search-btn" class="search-btn">Sök</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="news-grid" class="news-grid">
+            <div class="loading">Laddar nyheter...</div>
+        </div>
+
+        <div id="article-view" class="article-view hidden">
+            <button id="back-btn" class="back-btn">← Tillbaka till Nyheter</button>
+            <article id="article-content">
+                <h2 id="article-title"></h2>
+                <div id="article-text"></div>
+            </article>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

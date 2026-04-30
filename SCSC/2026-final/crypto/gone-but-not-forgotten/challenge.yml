@@ -1,0 +1,32 @@
+title: Gone but not forgotten
+description: See readme.
+authors:
+  - Hjalmar Hoglund
+categories:
+  - crypto
+
+flag_format_prefix: SCSC{
+flags: 128-bits-are-a-lot-of-bits-01101000011001010110110001101100011011110101010001101000011001010111001001100101010001100111001001101001011001010110111001100100
+
+downloadable_files:
+  - poly.txt
+
+service:
+  type: tcp
+  image: container
+  internal_port: 34567
+  external_port: 40201
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40201
+solution_image: ./solution
+score: 600
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: a5bfb956-3d8e-4550-a234-c29a1c28f86b
+spec: 0.0.1

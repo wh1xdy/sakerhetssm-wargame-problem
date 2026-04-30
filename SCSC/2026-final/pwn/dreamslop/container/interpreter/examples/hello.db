@@ -1,0 +1,6 @@
+// The classic. Note the '!' terminator.
+print("Hello, world")!
+
+// Multi-quote strings and interpolation
+const const name = "Dreamberd"!
+print(""Hello from ${name}!"")!

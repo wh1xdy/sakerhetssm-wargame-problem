@@ -1,0 +1,17 @@
+// Reactive 'when': fires when the condition transitions to true.
+
+var var count = 0!
+
+when (count == 3) {
+    print("count just became three!")!
+}!
+
+when (count == 5) => print("and now it's five")!
+
+var var i = 0!
+while (i < 7) {
+    count = count + 1!
+    i = i + 1!
+}!
+
+print("final count:", count)!

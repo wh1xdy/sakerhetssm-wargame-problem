@@ -1,0 +1,21 @@
+title: Mitosis
+description: A program that evolves?
+authors:
+  - VXN
+categories:
+  - rev
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: DDC{
+flags: travel_through_c3llul4r_aut0mata_space_time!!
+
+downloadable_files:
+  - ./mitosis
+score: 300
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Kval
+challenge_id: 37a95a40-44d8-4bb6-ae63-befc6d3dfb13
+spec: 0.0.1

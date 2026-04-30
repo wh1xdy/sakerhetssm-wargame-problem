@@ -1,0 +1,27 @@
+// Lifetimes attach to a declaration with `<...>`.
+//   <N>         lives N more statements (lines)
+//   <Ns>        lives N more seconds
+//   <Infinity>  lives forever (the default)
+//   <-Infinity> never even existed
+
+// Forever, by default and explicitly:
+const const a = "default forever"!
+const const b<Infinity> = "explicit forever"!
+print(a, b)!
+
+// Lives for two more statements after declaration:
+const const ephemeral<2> = "I won't last"!
+print("first read:", ephemeral)!
+print("second read:", ephemeral)!
+
+// 'ephemeral' has now expired. Reads on it would error; we'll just
+// declare a fresh variable to show the program continues.
+const const after = "still running after expiration"!
+print(after)!
+
+// Born dead:
+const const ghost<-Infinity> = "boo"!
+// Reading 'ghost' would error; comment out to keep the example green.
+// print(ghost)!
+
+print("done")!

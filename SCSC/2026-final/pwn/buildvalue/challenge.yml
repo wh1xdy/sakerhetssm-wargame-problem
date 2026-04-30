@@ -1,0 +1,33 @@
+title: buildvalue
+description: build any value you want, the only limit is your imagination.
+authors:
+  - Valter Mann
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SCSC{
+flags: i_love_converter_functions
+
+downloadable_files:
+  - dist.tar.gz
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40206
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40206
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+score: 300
+challenge_id: 1d81dc42-72fc-4179-a115-252228f5b08c
+spec: 0.0.1

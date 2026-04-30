@@ -1,0 +1,32 @@
+title: typo
+description: Don't want to break Hyrum's Law!
+authors:
+  - n00byedge
+categories:
+  - pwn
+
+flag_format_prefix: SCSC{
+flags: now_thats_a_dense_shellcode
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40210
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40210
+score: 400
+downloadable_files:
+  - container/typo
+  - main.c
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 956396c3-404b-44b5-b7aa-34f48b228091
+spec: 0.0.1

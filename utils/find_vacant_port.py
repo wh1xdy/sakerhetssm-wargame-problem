@@ -4,7 +4,7 @@ import sys
 
 START_PORT = 40000
 END_PORT = 50000
-LIMIT = 5
+LIMIT = 100
 VERBOSE = False
 
 # You do not need to run this with args :)

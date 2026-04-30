@@ -1,0 +1,33 @@
+title: Old but gold
+description: "Dang it! Why is computer hardware so expensive?? I just want to play my games, but my only spare computer is that Intel 8080 I found in the garage... Well, well, I'll have to make do with it until prices come down. If I optimize the code it might still be useful. nc old-but-gold.ctf.wales 4012"
+authors:
+  - Hjalmar Hoglund
+categories:
+  - crypto
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SCSC{
+flags: maybe-there-is-a-reason-for-cryptographic-randomness-being-slow
+
+downloadable_files:
+  - container/net-old-but-gold.go
+
+service:
+  type: tcp
+  image: container
+  internal_port: 40123
+  external_port: 40202
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40202
+solution_image: ./solution
+score: 400
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 49485064-9051-455d-8562-645644cc33e1
+spec: 0.0.1

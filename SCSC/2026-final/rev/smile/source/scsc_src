@@ -1,0 +1,87 @@
+pseudocode
+  i = 0
+  outer:
+  x = flag[i]
+  n = 2
+  loop:
+  if x % n != 0 goto next
+  x = x / n
+  print n
+  goto loop
+  next:
+  n = n + 1
+  if n < 128 goto loop
+  print CR
+  i = i + 1
+  if i < 32 goto outer
+
+data layout
+  200 = i (30000 00002)
+  201 = x
+  202 = 01000 00000
+  203 = n
+  204 = 80000 000FF
+  205 = 00000 00001
+  206 = tmp
+  207 = base
+  208 = 32000 00000
+  209 = digit
+  20A = blank
+  20B = FFFFF FFFFF
+  20C = 0CCCC CCCCD
+  20D = 00800 00000
+  20E = 3F800 00000
+  20F = 00100 00000
+  210 = 32000 00000
+  211 = 30000 00000
+  212 = sum
+  213 = correct sum
+
+code
+  outer<left>:
+    20052 00634 # load i, set address
+    000F8 000F8 # print spaces
+    20552 000F0 # print '1'
+    30052 20130 # x = flag[i]
+    21250 21230 # sum += flag[i]
+    20252 20330 # n = 2
+  loop<left>:
+    20152 20380 # x div n
+    00020 20458 # -max rem
+    01FA4 20152 # <0 goto next
+    000F8 002F8 # print " . "
+    000F8 20380 # x div n
+    00028 20558 # transfer, remove rounding
+    008DC 20130 # shift right 8, x = x / n
+    20352 20630 # tmp = n
+    20852 20730 # base = 100
+    20B52 20A30 # blank = -1
+  pn1<left>:
+    20B52 20930 # digit = -1
+  pn2<left>:
+    20652 20758 # tmp - base
+    018A8 20630 # <0 goto pd, tmp -= base
+    20952 20550 # digit += 1
+    20930 01490 # goto pn2
+  pd<left>:
+    20A52 01AA4 # blank >=0 goto print
+    20952 01AA4 # digit >=0 goto print
+  print<right>:
+    01C94 20952 # goto pb, load digit
+    20550 000F0 # print digit + 1
+  pb<right>:
+    20A30 20742 # blank positive, load base
+    20C72 20730 # base /= 10
+    20D58 013A0 # base - 1 >=0 goto pn1
+  next<left>:
+    00990 20352 # goto loop, load n
+    20D50 20330 # n += 1
+    20E58 009A8 # n - 127, <0 goto loop
+    001F8 20052 # print CR, load i
+    20F50 20030 # i += 1
+    21058 003A8 # i < 32 goto outer
+    21252 21358 # sum -= correct sum
+    21230 2125E # load -abs(sum)
+    028A8 005F8 # <0 goto end, print '+'
+  end<left>:
+    001F8 000B0 # print CR, halt

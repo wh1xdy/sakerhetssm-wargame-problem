@@ -1,0 +1,43 @@
+title: Nyheter
+description: VI HAR HELA LISTAN
+authors:
+  - avlidienbrunn
+categories:
+  - web
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: "SCSC{"
+flag_format_suffix: "}"
+flags: 1_Am_t3H_AnsV@riG_uTG1vare_n0W
+
+deployment:
+  type: docker
+  containers:
+    nyheter-chall:
+      image: ./chall
+      services:
+        - type: website
+          internal_port: 3000
+          external_port: 40213
+    nyheter-db:
+      image: ./mariadb
+  networks:
+    nyheter-challenge:
+      - nyheter-chall
+      - nyheter-db
+  volumes: {}
+
+predefined_services:
+- type: website
+  url: http://ssmarkiv.ctfchall.se:40213
+solution_image: ./solution
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+downloadable_files:
+  - dist/chall.zip
+score: 150
+challenge_id: 75b32ff8-c219-44eb-b5b4-7589b1ef95dd
+spec: 0.0.1

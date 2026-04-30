@@ -1,0 +1,21 @@
+// Kleene logic with 'maybe'. Equality has four levels.
+
+print("truth table")!
+print("true  && maybe =", true && maybe)!
+print("false && maybe =", false && maybe)!
+print("true  || maybe =", true || maybe)!
+print("false || maybe =", false || maybe)!
+
+print("")!
+print("equality levels")!
+print("1 == \"1\"    :", 1 == "1")!
+print("1 === \"1\"   :", 1 === "1")!
+print("1 ==== \"1\"  :", 1 ==== "1")!
+print("1 ===== \"1\" :", 1 ===== "1")!
+
+const const s1 = "hi"!
+const const s2 = "hi"!
+print("")!
+print("\"hi\" ==== \"hi\"  :", s1 ==== s2)!
+// Reference equality for strings: each literal creates a fresh Str.
+print("\"hi\" ===== \"hi\" :", s1 ===== s2)!

@@ -1,0 +1,34 @@
+title: Behörighet saknas
+description: I enlighet med gällande administrativa riktlinjer har denna autentiseringsbaserade prövning (”Utmaningen”) etablerats för att utvärdera deltagarens förmåga att analysera och kringgå systemets inloggningsmekanismer.
+authors:
+  - joel
+categories:
+  - pwn
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SCSC{
+flags: 3n_sv3nsk_försök3r_b4r4_l0gg4_1n
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: true
+  external_port: 40205
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40205
+
+downloadable_files:
+  - container/service
+  - container/challenge.c
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+score: 250
+challenge_id: 76a0c006-2fb7-4e00-99c6-903733fe2891
+spec: 0.0.1

@@ -1,0 +1,18 @@
+// The four declaration kinds.
+
+const const really_const = 42!          // cannot reassign, cannot mutate contents
+const var   const_binding = [1, 2, 3]!  // cannot reassign, contents can change
+var   const fixed_value = "frozen"!     // can rebind, but not mutate contents
+var   var   fully_loose = 0!            // anything goes
+
+print(really_const)!
+const_binding[0] = 99!
+print(const_binding)!
+
+fixed_value = "new string"!
+print(fixed_value)!
+
+fully_loose = fully_loose + 1!
+fully_loose = fully_loose + 1!
+print(fully_loose)!
+print("previous:", previous fully_loose)!

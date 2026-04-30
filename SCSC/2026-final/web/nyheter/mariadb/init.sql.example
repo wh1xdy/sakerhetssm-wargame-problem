@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS news (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    is_public BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+REPLACE INTO news (id, title, content, is_public) VALUES
+(1, 'Bryt: Lokal katt vald till borgmästare', 'I en aldrig tidigare skådad händelse har en lokal katt vid namn Whiskers valts till borgmästare i staden. Kandidaten kandiderade på en kandidatplattform byggd på sovtid och obligatoriska maggnuggningar för alla medborgare.', TRUE),
+(2, 'Teknikjätte tillkännager ny pryl', 'Ett stort teknikföretag har avslöjat sin senaste pryl som lovar att revolutionera hur vi interagerar med våra enheter. Enheten har banbrytande teknik och en elegant design.', TRUE),
+(3, 'Väderuppdatering: Soliga himlar framåt', 'Meteorologer förutspår vackert väder för den kommande veckan med klar himmel och måttliga temperaturer. Perfekta förhållanden för utomhusaktiviteter och evenemang.', TRUE),
+(4, 'Sportslag vinner mästerskap', 'Det lokala sportlaget har säkrat mästerskapstiteln efter en spännande finalmatch. Fans firade sent in på natten när deras lag tog hem trofén.', TRUE),
+(5, 'Ny restaurang öppnar i centrum', 'En ny restaurang specialiserad på fusionskök har öppnat sina dörrar i centrum. Lokalen lovar en unik matupplevelse med innovativa menyalternativ.', TRUE),
+(6, 'FLAGGA: SCSC{EXAMPLE}', 'Grattis! Du hittade den hemliga flaggan. Den här artikeln var inte avsedd att vara offentligt tillgänglig. Flaggan är: SCSC{EXAMPLE}', FALSE),
+(7, 'Vetenskapligt genombrott tillkännages', 'Forskare vid det lokala universitetet har gjort ett betydande genombrott inom sitt område. Upptäckten kan ha långtgående konsekvenser för framtida studier.', TRUE),
+(8, 'Gemenskapsodlingsprojekt lanseras', 'Ett nytt gemenskapsodlingsprojekt syftar till att samla grannar och främja hållbart leverne. Volontärer är välkomna att delta i initiativet.', TRUE);

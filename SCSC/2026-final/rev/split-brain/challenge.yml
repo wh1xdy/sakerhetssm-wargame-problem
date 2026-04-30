@@ -1,0 +1,21 @@
+title: Split Brain
+description: Will you split the Split Brain or will it split your brain?
+authors:
+  - ZetaTwo
+categories:
+  - reversing
+
+# set the flag_format_prefix to `null` to not use the flag format
+flag_format_prefix: SCSC{
+flags: 1nsan3_iN_th3_Split_brainz
+
+downloadable_files:
+  - build/split-brain
+score: 500
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 39a63ba8-c3c2-4b36-9911-1ac0c27f2bd1
+spec: 0.0.1

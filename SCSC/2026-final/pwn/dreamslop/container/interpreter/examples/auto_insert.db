@@ -1,0 +1,19 @@
+// Multi-arg arrow lambdas with assignment-as-expression in the body
+var var keys = { up: false, down: false }!
+const var fakeListener = (k, cb) => { cb({ key: k })! }!
+fakeListener("up", (e) => keys[e.key] = true)!
+print(keys)!
+
+// TypeScript-style type annotations are accepted (and ignored)
+const const score: int = 42!
+const const re: RegExp<[a-z]+\d*> = "hi42"!
+print(score, re)!
+
+// `delete N` propagates to arithmetic results
+delete 7!
+// 3 + 4 would be 7, which has been deleted -- but here we re-introduce
+// it via a fresh non-deleted computation:
+print(2 + 4)!
+
+// Auto-closing of strings (AQMI) and brackets (ABI) at EOF:
+print("end of file

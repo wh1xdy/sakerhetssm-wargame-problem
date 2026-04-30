@@ -1,0 +1,32 @@
+title: PowerTower
+description: "Welcome to the PowerTower crypto store! Try our latest service: PowPowPow."
+authors:
+  - Hjalmar Hoglund
+categories:
+  - crypto
+
+flag_format_prefix: SCSC{
+flags: oh-no-not-very-secure
+
+downloadable_files:
+  - container/net-powpowpow.go
+
+service:
+  type: tcp
+  image: container
+  internal_port: 40010
+  external_port: 40203
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40203
+solution_image: ./solution
+score: 300
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 8d463b5e-358d-426e-9f7f-e45d31d316ca
+spec: 0.0.1

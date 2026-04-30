@@ -1,0 +1,21 @@
+title: QR Scanner
+description: I found this cool QR scanner app. But it seems like it has some hidden resources somewhere...
+
+authors:
+  - Instellate
+categories:
+  - reversing
+
+flag_format_prefix: SCSC{
+flags: qt_resources_are_stupid
+
+downloadable_files:
+  - qrScanner.apk
+score: 250
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 228fd0e7-f30e-44c6-92d8-03bdcfb65a42
+spec: 0.0.1

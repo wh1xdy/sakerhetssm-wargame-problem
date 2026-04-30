@@ -1,0 +1,8 @@
+# Build folders
+build
+build-*
+cmake-build-*
+
+# IDE files
+.idea
+.cache

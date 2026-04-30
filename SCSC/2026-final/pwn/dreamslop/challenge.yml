@@ -1,0 +1,41 @@
+title: DreamSlop
+description: |
+  DreamSlop is a subset extension of DreamBerd [https://github.com/TodePond/GulfOfMexico](the perfect programming language).
+  We envision a future where all your slop needs to be handled in an efficient manner.
+  This is why we introduced the DreamSlop Heap Memory Model, it's guaranteed to perform!
+
+authors:
+  - nnewram
+categories:
+  - pwn
+tags:
+  - heap
+  - interpreter
+
+flag_format_prefix: null
+flags:
+  - flag: "SCSC{0bj3c71v31y_7h3_b357_pr0gr4mm1ng_14ngu4ge}"
+    type: text
+
+downloadable_files:
+  - chall.zip
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  privileged: false
+  external_port: 40207
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40207
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+score: 300
+challenge_id: 8f3c2a91-6b0e-4d2f-9c1a-7e4b8d0a2f63
+spec: 0.0.1

@@ -1,0 +1,39 @@
+title: Meck
+description: Bygg binärer med Mulle Meck!
+authors:
+  - avlidienbrunn
+categories:
+  - Misc
+
+flag_format_prefix: "SCSC{"
+flag_format_suffix: "}"
+flags: chatgpt:_buffer_overflow_i_verkstan
+
+deployment:
+  type: docker
+  containers:
+    mulle-chall:
+      image: ./chall
+      services:
+        - type: website
+          internal_port: 5555
+          external_port: 40204
+  networks:
+    mulle-challenge:
+      - mulle-chall
+  volumes: {}
+
+solution_image: ./solution
+
+predefined_services:
+  - type: website
+    url: http://ssmarkiv.ctfchall.se:40204
+downloadable_files:
+  - handout/handout.zip
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+challenge_id: 75b32ff8-c219-ccdd-aabb-7589b1ef95dd
+spec: 0.0.1

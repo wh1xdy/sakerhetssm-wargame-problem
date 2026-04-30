@@ -1,0 +1,14 @@
+truth table
+true  && maybe = maybe
+false && maybe = false
+true  || maybe = true
+false || maybe = maybe
+
+equality levels
+1 == "1"    : true
+1 === "1"   : true
+1 ==== "1"  : false
+1 ===== "1" : false
+
+"hi" ==== "hi"  : true
+"hi" ===== "hi" : false

@@ -1,0 +1,16 @@
+FROM ubuntu@sha256:186072bba1b2f436cbb91ef2567abca677337cfc786c86e107d25b7072feef0c
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    socat \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN useradd -m -s /bin/sh ctf
+
+COPY a.out /home/ctf/a.out
+RUN chmod 755 /home/ctf/a.out
+
+COPY --chown=ctf:ctf flag.txt /flag.txt
+
+EXPOSE 1337
+
+CMD ["socat", "TCP-LISTEN:1337,reuseaddr,fork", "EXEC:/home/ctf/a.out,su=ctf"]

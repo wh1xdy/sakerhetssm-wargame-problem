@@ -1,0 +1,31 @@
+title: DUAL_LCG_DBRG
+description: "I've devised a new RNG, which I call DUAL_LCG_DBRG It's keyed, so even by knowing the state of the RNG, it is not predictable. By employing massive amounts of non-linearity via low-level bit operations I have made it both secure and highly efficient on low-power devices."
+authors:
+  - grocid / MSAB
+categories:
+  - crypto
+
+flag_format_prefix: SCSC{
+flags: very_low_power_but_very_strong_right
+
+downloadable_files:
+  - dual_lcg_dbrg.py
+
+service:
+  type: tcp
+  image: container
+  internal_port: 1337
+  external_port: 40200
+
+predefined_services:
+  - type: tcp
+    host: ssmarkiv.ctfchall.se
+    port: 40200
+custom:
+  publish: true
+
+human_metadata:
+  event_name: SCSC 2026 Final
+score: 550
+challenge_id: 937e40fe-35d6-47b5-9c55-f971d4673261
+spec: 0.0.1

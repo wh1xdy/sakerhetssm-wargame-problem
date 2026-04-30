@@ -10,12 +10,12 @@ service:
 # website service
 predefined_services:
 - type: website
-  url: http://188.126.67.132:44444 # Change this port to the external_port
+  url: http://ssmarkiv.ctfchall.se:44444 # Change this port to the external_port
 
 # tcp service
 predefined_services:
   - type: tcp
-    host: 188.126.67.132
+    host: ssmarkiv.ctfchall.se
     port: 44444 # Change this port to the external_port
 
 human_metadata:
