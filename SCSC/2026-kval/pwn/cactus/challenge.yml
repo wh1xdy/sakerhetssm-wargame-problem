@@ -19,7 +19,7 @@ predefined_services:
   - type: tcp
     host: ssmarkiv.ctfchall.se
     port: 40217
-score: 450
+score: 500
 
 flag_format_prefix: DDC{
 flags: ooooooohhhhhhh_imm_taggingggggg_aaaahahhhhh
