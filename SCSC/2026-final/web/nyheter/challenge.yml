@@ -32,7 +32,7 @@ predefined_services:
   url: http://ssmarkiv.ctfchall.se:40213
 solution_image: ./solution
 custom:
-  publish: true
+  publish: false
 
 human_metadata:
   event_name: SCSC 2026 Final

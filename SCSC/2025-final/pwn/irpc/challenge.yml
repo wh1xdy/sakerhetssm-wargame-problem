@@ -31,7 +31,7 @@ predefined_services:
 challenge_id: b85bea6c-4078-4b4a-a1e5-d3583b15d601
 spec: 0.0.1
 custom:
-  publish: true
+  publish: false
 
 human_metadata:
   event_name: SCSC 2025 Final
