@@ -1,5 +1,7 @@
 title: Tiny
-description: "That's a small executable."
+description: | 
+ "That's a small executable."
+ Hint: sudo sysctl vm.mmap_min_addr=0
 authors:
   - Hannes Bredberg
 categories:
