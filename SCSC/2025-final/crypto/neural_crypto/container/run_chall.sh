@@ -1,4 +1,5 @@
 #!/usr/bin/sh
 
-export HOME=/home/ctf/
+export HOME=/tmp
+export TMPDIR=/tmp
 sage chall.sage

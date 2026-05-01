@@ -24,7 +24,7 @@ FROM ghcr.io/google/nsjail/nsjail:latest
 
 COPY --from=chroot / /chroot
 RUN mkdir /chroot/home/ctf/.sage
-RUN chmod 777 /chroot/home/ctf/.sage
+RUN chown -R 1337:1337 /chroot/home/ctf && chmod 0755 /chroot/home/ctf && chmod 777 /chroot/home/ctf/.sage
 
 ENTRYPOINT nsjail --port 1337 --chroot /chroot/ --rw --user 1337 --group 1337 --cwd /home/ctf/ \
   --tmpfsmount /tmp --bindmount_ro /etc/resolv.conf:/etc/resolv.conf -- ./run_chall.sh
