@@ -6,6 +6,7 @@ RUN mkdir -p /home/ctf/
 
 COPY typo /home/ctf/typo
 COPY flag /home/ctf/flag
+RUN chmod 0755 /home/ctf/typo && chown -R ctf:ctf /home/ctf/
 
 # Now setting up the actual container
 FROM ghcr.io/google/nsjail/nsjail:latest

@@ -13,6 +13,8 @@ COPY secrets.py .
 COPY run_chall.sh .
 COPY chall.sage .
 RUN chmod 0755 /home/ctf/run_chall.sh && chown -R ctf:ctf /home/ctf/
+RUN mkdir -p /home/ctf/tmp && chown ctf:ctf /home/ctf/tmp && chmod 0700 /home/ctf/tmp
+ENV TMPDIR=/tmp
 
 WORKDIR /
 
