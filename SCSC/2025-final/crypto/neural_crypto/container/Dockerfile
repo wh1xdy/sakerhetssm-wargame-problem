@@ -12,6 +12,7 @@ WORKDIR /home/ctf/
 COPY secrets.py .
 COPY run_chall.sh .
 COPY chall.sage .
+RUN chmod 0755 /home/ctf/run_chall.sh && chown -R ctf:ctf /home/ctf/
 
 WORKDIR /
 
